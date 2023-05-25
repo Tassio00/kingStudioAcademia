@@ -6,21 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King Studio</title>
     <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./paletaHome.css">
 </head>
 <body>
 
-    <nav>
-        <img id="logoNav" src="./static/svg/logoKing-escrito-rei.svg" alt="logo">
+    <nav class="fcolor1">
+        <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
         <ul>
             <li>
-                <p>HORÁRIOS</p>
+                <a class="color0" href="#">
+                    <p class="fontking">SOBRE NÓS</p>
+                </a>
             </li>
-            <li class="li-drop">
-                <p>PLANOS</p>
-                <img class="seta" src="./static/svg/seta-icon.svg" alt="seta">
+            <li>
+                <a class="color0" href="#">
+                    <p class="fontking">EQUIPE</p>
+                </a>
+            </li>
+            <li>
+                <a class="color0" href="#">
+                    <p class="fontking">HORÁRIOS</p>
+                </a>
+            </li>
+            <li class="li-drop" id="planosNav">
+                <a class="color0" href="#">
+                    <p class="fontking">PLANOS</p>
+                </a>
+                <img class="seta" src="../static/svg/seta-icon.svg" alt="seta" id="setaNav">
             </li>
             <li id="nav-matricule-se">
-                <p>MATRICULE-SE</p>
+                <a href="#">
+                    <strong>
+                        <p class="fontking color1">MATRICULE-SE</p>
+                    </strong>
+                </a>
             </li>
         </ul>
     </nav>

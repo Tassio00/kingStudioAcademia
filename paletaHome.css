@@ -1,0 +1,22 @@
+.color0{
+    color: #ffffff;
+}
+.fcolor0{
+    background-color: #ffffff;
+}
+
+
+.color1{
+    color: #ce2c2c;
+}
+.fcolor1{
+    background-color: #ce2c2c;
+}
+
+
+.gradiente1{
+    color: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
+}
+.fgradiente1{
+    background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
+}
