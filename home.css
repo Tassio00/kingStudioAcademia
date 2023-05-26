@@ -40,7 +40,6 @@ nav ul{
     gap: 30px;
     padding: 0;
     margin: 0;
-    
     color: rgb(255, 255, 255);
     flex-direction: row;
     align-items: center;
@@ -68,6 +67,7 @@ nav ul li{
 }
 
 
+/*Estilo do drop Menu*/
 .li-drop{
     display: flex;
     flex-direction: row;
@@ -75,15 +75,39 @@ nav ul li{
     gap: 10px;
 }
 
+#planosNav{
+    
+}
 
 .seta{
     height: 10px;
 }
 
-#logoNav{
-    height: 100px;
+.divsubMenu{
+    position: absolute;
+    display: none;
+}
+
+.divsubMenu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
     
 }
-.linkLogonav{
+nav ul li:hover .divsubMenu{
+    display: block;
+}
+/*FIM Estilo do drop Menu*/
+
+
+
+
+
+
+
+
+#logoNav{
+    height: 100px;
     
 }
