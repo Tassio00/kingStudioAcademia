@@ -1,5 +1,6 @@
 html{
     font-size: 62.5%;
+    color: #ffffff;
 }
 
 @font-face {
@@ -22,9 +23,17 @@ body{
     margin: 0;
 }
 
+.centraliza{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 nav{
+    background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
     box-shadow: 0px 6px 19px #00000033;
     height: 150px;
+    width: 100%;
     display: flex;
     flex-flow: nowrap;
     flex-direction: row;
@@ -47,57 +56,156 @@ nav ul{
 
 
 nav ul li{
+    color: #ffffff;
     padding: 0;
     font-size: 2.8rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-
-
 }
+
+.cor-nav-elementos{
+    color: #ffffff;
+}
+.cor-nav-elementos:hover{
+    color: #d8d8d8;
+}
+.cor-nav-planos{
+    color: #ffffff;
+}
+
+
 #nav-matricule-se{
     background-color: #ffffff;
     box-shadow: 0px 6px 19px #00000033;
     width: 250px;
     height: 60px;
+    margin: 0px 10px;
     font-size: 2.75rem;
     border-radius: 100px;
     justify-content: center;
-    
 }
-
+.cor-Matricule-se{
+    color: #d41414;
+}
+.cor-Matricule-se:hover{
+    color: #d41414;
+    font-size: 2.9rem;
+}
 
 /*Estilo do drop Menu*/
 .li-drop{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 #planosNav{
-    
+    position: relative;
 }
+#planosNav:hover .seta{
+    transform: rotateX(180deg);
+}
+
 
 .seta{
     height: 10px;
 }
 
+
 .divsubMenu{
     position: absolute;
-    display: none;
+    display: block;
+    top: 70px;
+    
 }
 
+.fonteTamanhoDrop{
+    font-size: 1.8rem;
+    padding: 7px 10px;
+    color: #ffffff;
+    
+}
+.fonteTamanhoDrop:hover{
+    color: #d8d8d8;
+}
+
+
 .divsubMenu ul{
+    background-color: #ad1818;
+    display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
+    white-space: pre;
+    left: -22px;
+    border-radius: 10px;
     
 }
+
+
+
+
+.divsubMenu ul li:hover{
+    
+    border-radius: 10px;
+    width: 100%;
+    
+}
+
+.divsubMenu{
+    display: none;
+    
+}
+
+
 nav ul li:hover .divsubMenu{
     display: block;
+    animation: moveDrop 0.5s cubic-bezier(0, 0, 0.1, 0.99) 20ms;
+    
+    
+    
 }
+
+@keyframes moveDrop {
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 0.6;
+    }
+    
+    100%{
+        transform: scaleY(100%);
+        opacity: 1;
+    }
+    
+}
+
+#cardSeta{
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+}
+.face{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 22px;
+    height: 15px;
+    display: flex;
+}
+
+
+
+
+
+
+
 /*FIM Estilo do drop Menu*/
 
 
@@ -111,3 +219,41 @@ nav ul li:hover .divsubMenu{
     height: 100px;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+
+
+
+/**/
+
+
+
+
+
+/**/
+

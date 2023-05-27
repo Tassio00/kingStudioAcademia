@@ -7,6 +7,7 @@
     <title>King Studio</title>
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="./paletaHome.css">
+    <script src="./home.js"></script>
 </head>
 <body>
 
@@ -14,37 +15,43 @@
         <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
         <ul>
             <li>
-                <a class="color0" href="#">
+                <a class="cor-nav-elementos" href="#">
                     <p class="fontking">SOBRE NÓS</p>
                 </a>
             </li>
             <li>
-                <a class="color0" href="#">
+                <a class="cor-nav-elementos" href="#">
                     <p class="fontking">EQUIPE</p>
                 </a>
             </li>
             <li>
-                <a class="color0" href="#">
+                <a class="cor-nav-elementos" href="#">
                     <p class="fontking">HORÁRIOS</p>
                 </a>
             </li>
             <li class="" id="planosNav">
-                <a class="color0 li-drop" href="#">
+                <a class="cor-nav-planos li-drop" href="#">
                     <p class="fontking">PLANOS</p>
-                    <img class="seta" src="../static/svg/seta-icon.svg" alt="seta" id="setaNav">
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+                    
                 </a>
                 <div class="divsubMenu">
-                    <ul class="fcolor1">
-                        <li><p class="fontking">PLANO MENSAL</p></li>
-                        <li><p class="fontking">PLANO SEMESTRAL</p></li>
-                        <li><p class="fontking">PLANO ANUAL</p></li>
+                    <ul>
+                        <li class="centraliza"><a class="linkDrop" href=""><p class="fontking fonteTamanhoDrop">PLANO MENSAL</p></a></li>
+                        <li class="centraliza"><a class="linkDrop" href=""><p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p></a></li>
+                        <li class="centraliza"><a class="linkDrop" href=""><p class="fontking fonteTamanhoDrop">PLANO ANUAL</p></a></li>
                     </ul>
                 </div>
             </li>
             <li id="nav-matricule-se">
                 <a href="#">
                     <strong>
-                        <p class="fontking color1">MATRICULE-SE</p>
+                        <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
                     </strong>
                 </a>
             </li>
