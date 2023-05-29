@@ -1,6 +1,7 @@
 html{
     font-size: 62.5%;
     color: #ffffff;
+    
 }
 
 @font-face {
@@ -21,6 +22,7 @@ a{
 
 body{
     margin: 0;
+    
 }
 
 .centraliza{
@@ -87,10 +89,14 @@ nav ul li{
 }
 .cor-Matricule-se{
     color: #d41414;
+    transition: 0.5s;
+    
 }
 .cor-Matricule-se:hover{
     color: #d41414;
     font-size: 2.9rem;
+    transition: 0.5s;
+    
 }
 
 /*Estilo do drop Menu*/
@@ -103,14 +109,17 @@ nav ul li{
 
 #planosNav{
     position: relative;
+    
 }
 #planosNav:hover .seta{
     transform: rotateX(180deg);
+    transition: 0.5s;
 }
 
 
 .seta{
     height: 10px;
+    transition: 0.5s;
 }
 
 
@@ -142,21 +151,18 @@ nav ul li{
     white-space: pre;
     left: -22px;
     border-radius: 10px;
+    z-index: 10;
     
 }
-
-
-
-
 .divsubMenu ul li:hover{
     
     border-radius: 10px;
     width: 100%;
-    
 }
 
 .divsubMenu{
     display: none;
+    z-index: 1;
     
 }
 
@@ -164,9 +170,6 @@ nav ul li{
 nav ul li:hover .divsubMenu{
     display: block;
     animation: moveDrop 0.5s cubic-bezier(0, 0, 0.1, 0.99) 20ms;
-    
-    
-    
 }
 
 @keyframes moveDrop {
@@ -199,26 +202,22 @@ nav ul li:hover .divsubMenu{
     height: 15px;
     display: flex;
 }
-
-
-
-
-
-
-
-/*FIM Estilo do drop Menu*/
-
-
-
-
-
-
-
-
 #logoNav{
     height: 100px;
     
 }
+/*FIM Estilo do drop Menu*/
+
+
+
+/*FIM Estilo do Navbar*/
+
+
+
+/*Estilo do CONTEUDO*/
+
+
+
 
 
 

@@ -1,0 +1,71 @@
+.slider-content{
+  width: 400%;
+  height: auto;
+  display: flex;
+  z-index: 1;
+}
+.slider-content input, .img-mobail{
+  display: none;
+}
+
+.slide-box{
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.slide-box img{
+  width: 100%;
+}
+
+.nav-manual, .nav-auto{
+  position: absolute;
+  width: 100%;
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+  border: 1px solid #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1.5s;
+}
+
+.nav-manual .manual-btn:hover{
+  background-color: #ffffff;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+  margin-right: 10px;
+}
+
+
+#radio1:checked ~ .nav-auto .auto-btn1{  /*Verifica se o radio1 esta marcado (cheched), coso sim, as seguintes classes sofrem alteração*/
+  background-color: #ffffff;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+  background-color:  #ffffff;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3{
+  background-color: #ffffff;
+}
+
+
+#radio1:checked ~ .primeiro{  /*Verifica se a primeira esta selecionada, caso sim, ela vai ficar na posição inicial do carrossel (margin-left: 0%)*/
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{ /* 25% pois é a largura do nosso slide-box*/
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{ 
+  margin-left: -50%;
+}

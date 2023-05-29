@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King Studio</title>
     <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="./paletaHome.css">
-    <script src="./home.js"></script>
+    <link rel="stylesheet" href="./carrossel.css">
+    
 </head>
 <body>
 
-    <nav class="fgradiente1">
+    <nav>
         <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
         <ul>
             <li>
@@ -57,6 +57,45 @@
             </li>
         </ul>
     </nav>
-    
+
+    <section class="slider">
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro">
+                <img class="img-desktop" src="../static/img/carrosel_site_kingstudio1.png" alt="img">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="../static/img/carrosel_site_kingstudio1.png" alt="img">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="../static/img/carrosel_site_kingstudio1.png" alt="img">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <script src="./home.js"></script>
 </body>
 </html>
