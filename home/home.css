@@ -1,20 +1,33 @@
 html{
     font-size: 62.5%;
-    color: #ffffff;
+    color: #191919;
     
 }
 
+/*FONTES*/
 @font-face {
     font-family: "SF TransRobotics";
-    src: url('SF TransRobotics.ttf') format('opentype');
+    src: url('../static/fonts/kingstudiofont/SF\ TransRobotics.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
     
 }
-
+@font-face {
+    font-family: "century-gothic";
+    src: url('../static/fonts/century-gothic/century-gothic.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
 .fontking{
     font-family: "SF TransRobotics";
 }
+.fontCentury{
+    font-family: "century-gothic";
+}
+/*fim FONTES*/
+
+
 
 a{
     text-decoration: none;
@@ -215,6 +228,11 @@ nav ul li:hover .divsubMenu{
 
 
 /*Estilo do CONTEUDO*/
+
+
+section p{
+    font-size: 2rem;
+}
 
 
 
