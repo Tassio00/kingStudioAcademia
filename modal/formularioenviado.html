@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="../sobre nos/sobre_nos.css">
 
     <!-- Scripts e Css do Modal -->
+    <!-- Scripts e Css do PopupModal -->
+    <script src="../modal/js/popup_modal.js" defer></script>
+    <link rel="stylesheet" href="./css/popupModal.css">
+    <!-- END - Scripts e Css do PopupModal -->
     <link rel="stylesheet" href="./css/modal.css">
-    <script src="../modal/js/modal.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -132,39 +135,49 @@
     <!-- POPUB DE CONFIRMAÇÃO DO ENVIO DO FORMULÁRIO: -->
     <div id="popup-modal" class="popup-modal-toggle">
         <div class="popup-header">
-            <strong>
-                <h2>Solicitação de Matrícula enviada com Sucesso!</h2>
-            </strong>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16" id="close-modal-popup">
-                <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            <div class="title-close d-flex">
+                <strong>
+                    <h2>Solicitação de Matrícula enviada com Sucesso!</h2>
+                </strong>
+                <a href="../home.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16" id="close-modal-popup">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                    </svg>
+                </a>
+            </div>
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
             </svg>
         </div>
-        <hr class="mb-1">
+        <hr class="mb-2">
         <div class="popup-body">
-            <p>Obrigado por enviar seus dados à nossa equipe da King Studio! Em breve entraremos em contado com mais informações.</p>
+            <p>Obrigado por enviar seus dados à nossa equipe da King Studio! Em breve entraremos em contado com mais
+                informações.</p>
+            <img id="logopopup" class="d-flex" src="../static/svg/logoKing-escrito-rei.svg" alt="logo">
         </div>
     </div>
 
 
     <nav>
-        <img id="logoNav"src="../static/svg/logoKing-escrito-rei.svg" alt="logo">
+        <img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo">
         <ul>
             <li id="teste">
             </li>
             <li>
             </li>
             <li class="li-drop">
-                
+
             </li>
             <li id="nav-matricule-se">
-                
+
             </li>
         </ul>
     </nav>
 
-    PAGINA DE FORMULARIO ENVIADO
+
 
 </body>
 

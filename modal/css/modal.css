@@ -24,10 +24,23 @@
 }
 
 #modal,
-#fade{
+#fade, #fade-spinner{
     opacity: 1;
     transition: .5s;
     pointer-events: all;
+}
+#spinner{
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%-50%);
+    z-index: 40;
+}
+
+#spinner.hide{
+    opacity: 0!important;
+    pointer-events: none!important;
 }
 
 #fade{
@@ -57,9 +70,10 @@
 }
 
 #fade.hide{
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0!important;
+    pointer-events: none!important;
 }
+
 #modal.hide{
     opacity: 0;
     pointer-events: none;
@@ -90,66 +104,12 @@
     pointer-events: none!important;
  }
 
- #popup-modal{
-    position: fixed;
-    z-index: 20;
-    background: #a6f7b9;
-    color: #4c6953;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 50%;
-    transform: (50%, 50%);
-    transform: translate(-50%, 2rem);
-    border-radius: 1rem;
-    width: 900px;
-    max-width: 95%;
-    padding: 10px 14px;
-    transition: .5s;
-    opacity: 1;
-    pointer-events: all;
-    padding: 1.5rem;
- }
- .popup-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: .5rem;
-
- }
- .popup-header h2{
-    font-size: x-large;
- }
-
- #popup-modal hr, #popup-modal p{
-    margin: 0;
- }
-
- #close-modal-popup{
-    width: 1.8rem;
-    height: 1.8rem;
-    color: #ed1212;
-}
-
-#close-modal-popup:hover{
-    scale: 1.1;
-    color: #ec3838;
-    cursor: pointer;
-}
-
  /*                MEdias para diferentes tamanhos de telas:       */
 
 @media (max-width: 700px) {
   /* Estilos para telas com largura menor ou igual a 600px */
   #modal h2{
     font-size:x-large;
-  }
-  .popup-header h2{
-    font-size:large;
-  }
-  .popup-body p{
-    font-size:15px;
   }
 }
 

@@ -25,7 +25,11 @@
 </head>
 
 <body>
-
+    <!-- spinner de carregamento formulario => MODAL -->
+    <div class="spinner-border text-danger hide" role="status" id="spinner" >
+        <span class="sr-only"></span>
+    </div>
+    <div id="fade-spinner" class="hide"></div>
     <!-- ELEMENTOS => MODAL -->
     <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
@@ -39,7 +43,7 @@
         </div>
         <div class="modal-body">
             <!-- Make sure you don't change the form action-->
-            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal">
+            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()" >
                 <!-- Replace with accesKey sent to your email -->
                 <input type="hidden" name="accessKey" value="82ada6d6-528a-4025-ba3c-f13854acf2d7" required>
                 <!-- Required -->
@@ -127,24 +131,6 @@
                 <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
                 <div class="enviar"><input type="submit" value="Enviar" class="submit" /></div>
             </form>
-        </div>
-    </div>
-
-    <!-- POPUB DE CONFIRMAÇÃO DO ENVIO DO FORMULÁRIO: -->
-    <div id="popup-modal" class="popup-modal-toggle">
-        <div class="popup-header">
-            <strong>
-                <h2>Solicitação de Matrícula enviada com Sucesso!</h2>
-            </strong>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
-                viewBox="0 0 16 16" id="close-modal-popup">
-                <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-            </svg>
-        </div>
-        <hr class="mb-1">
-        <div class="popup-body">
-            <p>Obrigado por enviar seus dados à nossa equipe da King Studio! Em breve entraremos em contado com mais informações.</p>
         </div>
     </div>
 
