@@ -1,0 +1,154 @@
+
+#popup-modal{
+    position: fixed;
+    z-index: 20;
+    background: #a6f7b9;
+    color: #4c6953;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    width: 900px;
+    max-width: 95%;
+    height: 350px;
+    max-height: 95%;
+    padding: 10px 14px;
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+    padding: 1.5rem;
+    overflow-y: scroll;
+ }
+
+ #popup-modal::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0)
+}
+ 
+ .popup-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+ }
+
+ .popup-header h2{
+    font-size: x-large;
+ }
+
+ .popup-body p{
+    text-align: justify;
+    padding: 10px;
+  }
+ .popup-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    max-width: 90%;
+  }
+
+ #popup-modal hr, #popup-modal p{
+    margin: 0;
+ }
+
+ #close-modal-popup{
+    width: 1.8rem;
+    height: 1.8rem;
+    color: #ed1212;
+    position: fixed;
+    left: 90%;
+}
+
+#close-modal-popup:hover{
+    scale: 1.1;
+    color: #ec3838;
+    cursor: pointer;
+}
+
+#logopopup{
+  width: 400px;
+  max-width: 70%; 
+}
+
+#fade-spinner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 200;
+  pointer-events: none;
+}
+#fade-spinner.hide{
+  opacity: 0!important;
+  pointer-events: none!important;
+}
+
+@media (max-width: 700px) {
+    /* Estilos para telas com largura menor ou igual a 700px */
+    .popup-header h2{
+      font-size:large;
+    }
+    .popup-body p{
+      font-size:15px;
+      padding: 0;
+    }
+  }
+
+/* Check confirmação  */
+.checkmark__circle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  
+  .checkmark {
+    width: 50;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 1% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out 1.3s both;
+  }
+  
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke .5s cubic-bezier(0.65, 0, 0.45, 1) 1s forwards;
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes scale {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+  }
