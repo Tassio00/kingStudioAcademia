@@ -1,0 +1,22 @@
+/*FONTES*/
+@font-face {
+    font-family: "SF TransRobotics";
+    src: url('../fonts/kingstudiofont/SF\ TransRobotics.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face {
+    font-family: "century-gothic";
+    src: url('../fonts/century-gothic/century-gothic.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+.fontking{
+    font-family: "SF TransRobotics" !important;
+}
+.fontCentury{
+    font-family: "century-gothic" !important;
+}
+/*fim FONTES*/
