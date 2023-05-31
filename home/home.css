@@ -4,6 +4,8 @@ html{
     
 }
 
+/*Estilo do Navbar*/
+
 /*FONTES*/
 @font-face {
     font-family: "SF TransRobotics";
@@ -35,6 +37,7 @@ a{
 
 body{
     margin: 0;
+    overflow-x: hidden;
     
 }
 
@@ -54,11 +57,22 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 20%;
 
 }
 
+/*Responsividade Navbar*/
+
+@media (max-width: 1300px){
+    
+    
+}
+
+/*FIM Responsividade Navbar*/
+
+
+
 nav ul{
+    padding: 0;
     display: flex;
     list-style: none;
     gap: 30px;
@@ -99,7 +113,11 @@ nav ul li{
     font-size: 2.75rem;
     border-radius: 100px;
     justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
 .cor-Matricule-se{
     color: #d41414;
     transition: 0.5s;
@@ -202,6 +220,14 @@ nav ul li:hover .divsubMenu{
     
 }
 
+.linkDrop{
+    text-align: center;
+    height: 110px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
 #cardSeta{
     transform-style: preserve-3d;
     display: flex;
@@ -220,6 +246,177 @@ nav ul li:hover .divsubMenu{
     
 }
 /*FIM Estilo do drop Menu*/
+
+#ul-nav-hamburguer{
+    display: none;
+}
+
+.burguer{
+   display: none;
+}
+
+.hamburguer{
+    background-color: #ad1818;
+    height: 100%;
+    width: 400px;
+    transform: translateX(-500px);
+    transition: .6s;
+    z-index: 3;
+    left: 0;
+    position: fixed;
+}
+.showmenu{
+    transform: translateX(0px);
+}
+
+.hamburguer{
+    display: none;
+}
+
+#fade_hamburguer{
+    display: none;
+}
+
+
+
+
+
+/*Responsividade Navbar*/
+
+@media (max-width: 1300px){
+    nav ul li, #nav-matricule-se{
+        font-size: 2.2rem;
+    }
+    .cor-Matricule-se:hover{
+        font-size: 2.3rem;
+    }
+
+    #nav-matricule-se{
+        width: 200px;
+        height: 50px;
+    }
+    #logoNav {
+        height: 80px;
+    }
+    
+}
+
+@media (max-width: 1100px){
+
+    #logoNav {
+        height: 70px;
+    }
+
+    .ul-principal-nav{
+        display: none;
+    }
+    .barras-burguer{
+        height: 50px;
+        padding-left: 20px;
+        z-index: 3;
+        
+    }
+
+    .barras-burguer{
+        display: block;
+    }
+
+    nav{
+        justify-content: space-between; 
+        height: 115px;
+    }
+
+    .hamburguer ul{
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    #ul-hamburguer li{
+        color: #ffffff;
+        width: 100%;
+        height: 60px;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #ul-hamburguer li:hover{
+        color: #d8d8d8;
+        background-color: #981c1c;
+        transition: 0.3s;
+    }
+    
+    #ul-hamburguer li p{
+        margin: 0;
+
+    }
+    
+
+
+
+
+    .barras-burguer img{
+        width: 50px;
+        align-self: flex-end;
+        z-index: 2;
+        
+    }
+
+    #x-burguer img{
+        height: 40px;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    #x-burguer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburguer{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    #fade_hamburguer{
+        position: fixed;
+        width: 4000%;
+        height: 4000%;
+        background-color: hsla(0, 60%, 1%, 0.242);
+        z-index: 3;
+        display: none;
+    }
+
+
+
+
+    
+    .barras-burguer{
+        display: block;
+
+    }
+  
+    #ul-hamburguer{
+        display: block;
+    }
+
+
+    
+    
+
+    
+}
+
+/*FIM Responsividade Navbar*/
 
 
 

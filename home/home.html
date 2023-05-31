@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,55 @@
     <title>King Studio</title>
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="./carrossel.css">
-    
+
 </head>
+
 <body>
+    <div id="fade_hamburguer"></div>
+
+    <div class="hamburguer">
+
+        <div id="x-burguer" class="img-X-hamburguer"><img src="../static/svg/x-icon.svg" alt="x"></div>
+
+        <ul id="ul-hamburguer">
+            <a href="#">
+                <li>
+                    <p class="fontking">SOBRE NÓS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">EQUIPE</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">SHORÁRIOS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">PLANOS</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+
+
+
 
     <nav>
+
+        <a href="#">
+            <div class="barras-burguer"><img src="../static/svg/burguer-icon.svg" alt="img"></div>
+        </a>
+
+
         <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
-        <ul>
+
+
+        <ul class="ul-principal-nav">
             <li>
                 <a class="cor-nav-elementos" href="#">
                     <p class="fontking">SOBRE NÓS</p>
@@ -38,24 +81,32 @@
                             <img src="../static/svg/seta-icon.svg" alt="seta">
                         </div>
                     </div>
-                    
+
                 </a>
                 <div class="divsubMenu">
                     <ul>
-                        <li class="centraliza"><a class="linkDrop" href=""><p class="fontking fonteTamanhoDrop">PLANO MENSAL</p></a></li>
-                        <li class="centraliza"><a class="linkDrop" href=""><p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p></a></li>
-                        <li class="centraliza"><a class="linkDrop" href=""><p class="fontking fonteTamanhoDrop">PLANO ANUAL</p></a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
+                            </a></li>
                     </ul>
                 </div>
             </li>
-            <li id="nav-matricule-se">
-                <a href="#">
-                    <strong>
-                        <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
-                    </strong>
-                </a>
-            </li>
         </ul>
+
+        <div class="matricule-se" id="nav-matricule-se">
+            <a href="#">
+                <strong>
+                    <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
+                </strong>
+            </a>
+        </div>
+
     </nav>
 
     <section class="slider">
@@ -91,7 +142,7 @@
 
         </div>
     </section>
-    
+
 
 
 
@@ -99,4 +150,5 @@
 
     <script src="./home.js"></script>
 </body>
+
 </html>
