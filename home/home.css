@@ -261,7 +261,7 @@ nav ul li:hover .divsubMenu{
 
 
 
-/*Estilo equipamento*/
+/*Estilo qualidades*/
 
 .sessao2{
     width: 100%;
@@ -270,7 +270,6 @@ nav ul li:hover .divsubMenu{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f884f8;
 }
 
 .img-qualidade{
@@ -283,7 +282,7 @@ nav ul li:hover .divsubMenu{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #f9d5f9;
+    
     align-content: center;
 }
 
@@ -294,7 +293,7 @@ nav ul li:hover .divsubMenu{
     justify-content: space-between;
     height: 200px;
     width: 20%;
-    background-color: #d656d6;
+    
 }
 
 .texto-duchas{
@@ -302,16 +301,81 @@ nav ul li:hover .divsubMenu{
     text-align: center;
 }
 
+.container-texto{
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .texto-maquinas, .texto-equipe, .texto-estacionamento{
     font-size: 1.7rem;
     text-align: center;
 }
 .texto-equipe, .texto-estacionamento, .texto-duchas, .texto-maquinas{
-    padding-top: 90px;
+    text-align: center;
 }
-/*FIM Estilo equipamento*/
+/*FIM Estilo qualidades*/
 
 
+
+
+
+/* Estilo equipe*/
+
+.sessao3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+
+.container-img-equipe{
+    /* background-color: rgb(56, 40, 20); */
+    height: 400px;
+    width: 50%;
+}
+.img-equipe{
+    width: 500px;
+}
+.container-equipe-content-all{
+    /* background-color: rgb(252, 217, 171); */
+    display: flex;
+    flex-flow: wrap;
+    width: 85vw;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container-texto2{
+    width: 50%;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(194, 151, 96); */
+}
+
+.titulo-textos{
+    color: #ad1818;
+    font-weight: bolder;
+}
+.paragrafos-King1{
+    margin: 100px;
+    font-size: medium;
+    font-size: 2rem;
+    padding: 28px 0;
+}
+
+/* FIM Estilo equipe*/
 
 
 
@@ -469,6 +533,31 @@ nav ul li:hover .divsubMenu{
     #ul-hamburguer{
         display: block;
     }
+
+    .container-qualidades{
+        justify-content: space-between;
+    }
+    .img-qualidade{
+        height: 100px;
+    }
+    
+    .texto-duchas{
+        font-size: 1.9rem;
+    }
+    
+    .texto-maquinas, .texto-equipe, .texto-estacionamento{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .container-texto{
+        height: 100px;
+        text-align: center;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        
+    }
+
  
 }
 
@@ -479,6 +568,29 @@ nav ul li:hover .divsubMenu{
     #logoNav{
         height: 50px;
     }
+
+    .card-qualidade{
+        width: 15%;
+    }
+
+    .texto-duchas{
+        font-size: 1.5rem;
+    }
+    
+    .texto-maquinas, .texto-equipe, .texto-estacionamento{
+        font-size: 1.3rem;
+    }
+    
+    .texto-maquinas{
+        font-size: 1.2;
+    }
+    .img-qualidade{
+        height: 90px;
+    }
+    .container-texto{
+        width: 180%;
+    }
+
     
 }
 
