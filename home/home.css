@@ -16,6 +16,11 @@ body{
     margin: 0;
     overflow-x: hidden;
     text-decoration: none;
+
+    /* background-image: url('../static/img/bacground-planosKing2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
     
 }
 p{
@@ -27,6 +32,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 nav{
@@ -256,6 +262,213 @@ nav ul li:hover .divsubMenu{
 }
 
 
+
+
+
+
+
+
+@media (max-width: 1300px){
+    nav ul li, #nav-matricule-se{
+        font-size: 2.2rem;
+    }
+    .cor-Matricule-se:hover{
+        font-size: 2.3rem;
+    }
+
+    #nav-matricule-se{
+        width: 200px;
+        height: 50px;
+    }
+    #logoNav {
+        height: 80px;
+    }
+    #x-burguer img{
+        height: 60px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    
+    
+}
+/*Media 2 */
+@media (max-width: 1100px){
+
+    #logoNav{
+        height: 70px;
+    }
+
+    .ul-principal-nav{
+        display: none;
+    }
+    .barras-burguer{
+        height: 50px;
+        padding-left: 20px;
+        z-index: 3;
+        
+    }
+
+    .barras-burguer{
+        display: block;
+    }
+
+    nav{
+        justify-content: space-between; 
+        height: 115px;
+    }
+
+    .hamburguer ul{
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    #ul-hamburguer li{
+        color: #ffffff;
+        width: 100%;
+        height: 60px;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: #424242 solid 0.5px;
+    }
+
+    #ul-hamburguer li:hover{
+        color: #d8d8d8;
+        background-color: #dbdbdb;
+        transition: 0.3s;
+    }
+    #ul-hamburguer li p:hover{
+
+    }
+    #ul-hamburguer li:hover{
+        color: #ffffff;
+    }
+    
+    #ul-hamburguer li p{
+        margin: 0;
+        color: #981c1c;
+
+    }
+
+    #ul-hamburguer {
+        margin: 0;
+
+    }
+    
+    .barras-burguer img{
+        width: 50px;
+        align-self: flex-end;
+        z-index: 2;
+        
+    }
+
+    #x-burguer img{
+        height: 60px;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    #x-burguer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
+    }
+
+    .hamburguer{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: white;
+    }
+    #fade_hamburguer{
+        position: fixed;
+        width: 4000%;
+        height: 4000%;
+        background-color: hsla(0, 60%, 1%, 0.242);
+        z-index: 3;
+        display: none;
+    }
+
+
+    .slider{
+        display: none;
+    }
+
+    
+    .barras-burguer{
+        display: block;
+
+    }
+  
+    #ul-hamburguer{
+        display: block;
+    }
+
+
+ 
+}
+
+
+/*Media 3 */
+
+@media (max-width: 750px){
+    #logoNav{
+        height: 50px;
+    }
+
+    
+}
+
+/*Media 4 (mabills) */
+
+@media (max-width: 500px){
+    #logoNav{
+        width: 160px;
+    }
+
+    .hamburguer{
+        width: 70%;
+    }
+
+    .barras-burguer img{
+        width: 40px;
+    }
+    .barras-burguer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #nav-matricule-se {
+        width: 130px;
+        height: 50px;
+    }
+
+    .cor-Matricule-se{
+        font-size: 1.5rem;
+    }
+    .cor-Matricule-se:hover{
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+
+
+
+
 /*FIM Estilo do Navbar*/
 
 
@@ -342,6 +555,10 @@ nav ul li:hover .divsubMenu{
 }
 .img-equipe{
     width: 500px;
+    border-radius: 20px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 10px 3px #00000042;
 }
 .container-equipe-content-all{
     /* background-color: rgb(252, 217, 171); */
@@ -350,6 +567,8 @@ nav ul li:hover .divsubMenu{
     width: 85vw;
     justify-content: space-between;
     align-items: flex-start;
+
+    position: relative;
 }
 
 .container-texto2{
@@ -378,9 +597,197 @@ nav ul li:hover .divsubMenu{
 
 
 
+/* Estilo plano*/
+
+.clor1{
+    background-color: rgb(237, 210, 173);
+}
+.clor2{
+    background-color: rgb(232, 197, 150);
+}
+.clor3{
+    background-color: rgb(139, 101, 52);
+}
 
 
 
+
+.container-background-plano{
+    width: 100vw;
+    height: 3060px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  
+
+    background-color: rgb(37, 37, 37);
+    background-image: url('../static/img/bacground-planosKing2.png');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.titulo-textos2{
+    color: #87282a;
+    font-weight: bolder;
+    font-size: 3.1rem;
+    text-shadow: 5px 4px 13px #ff000299;
+    text-align: center;
+}
+
+.container-all-texto-plano{
+    width: 85vw;
+    height: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+.container-texto-plano{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragrafos-King2{
+    margin: 100px;
+    font-size: medium;
+    padding: 28px 0;
+    font-size: 2.5rem;
+    text-align: end;
+    padding: 28px 22px;
+    color: #d6d6d6;
+    border-right: 7px solid #ad1818;
+    border-radius: 5px;
+}
+
+
+
+
+
+.container-all-planos{
+    color: #d6d6d6;
+    width: 85vw;
+    height: 28%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.container-card-E-info{
+    width: 100%;
+    height: 660px;
+    background-color: #45454551;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.container-img-car{
+    width: 26%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.container-img-car img{
+    width: 100%;
+    height: auto;
+}
+
+.paragrafos-King3{
+    font-size: medium;
+    padding: 28px 0;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 28px 22px;
+    color: #d6d6d6;
+    border-right: 7px solid #ad1818;
+    border-radius: 5px;
+}
+.paragrafo-li-planos{
+    font-size: 3rem;
+    text-align: center;
+    color: #d6d6d6;
+}
+
+.container-info{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.texto-info{
+    display: none;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.esconde{
+    display: flex;
+}
+
+.container-btn-info{
+    width: 100%;
+    height: 30%;
+    
+}
+.texto-info ul{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.texto-info ul li{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.texto-info ul li img{
+    height: 30px;
+}
+.container-chek-li{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.btn-king-1{
+    width: 350px;
+    height: 80px;
+    border-radius: 50px;
+    background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
+    font-family: 'SF TransRobotics';
+    font-size: 5rem;
+    color: #d8d8d8;
+    box-shadow: 0px 0px 9px 0px #a4a4a47d;
+}
+
+
+
+/* FIM Estilo plano*/
 
 
 

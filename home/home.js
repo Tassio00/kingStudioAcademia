@@ -21,3 +21,31 @@ function passarSlide() {
 
 /*FIM code carrossel*/
 
+
+/* esconder info planos */
+var divInfo  = document.getElementById("info");
+var btn = document.getElementById("btn-mostra-esconde");
+
+btn.addEventListener("click", function() {
+    
+    console.log('jj');
+    divInfo.classList.toggle("esconde");
+    
+    
+});
+
+
+
+
+// function mostrar() {
+//     if (div.style.display == "none") {
+//         console.log('ojji');
+//         div.style.display = "flex";
+//     }else{
+//         div.style.display = "none";
+//         console.log('nao');
+//     }
+// };
+
+
+/* FIM esconder info planos */
