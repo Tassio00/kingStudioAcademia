@@ -16,11 +16,6 @@ body{
     margin: 0;
     overflow-x: hidden;
     text-decoration: none;
-
-    /* background-image: url('../static/img/bacground-planosKing2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
     
 }
 p{
@@ -614,13 +609,12 @@ nav ul li:hover .divsubMenu{
 
 .container-background-plano{
     width: 100vw;
-    height: 3060px;
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding-bottom: 50px;
   
-
-    background-color: rgb(37, 37, 37);
+    background-color: #000000;
     background-image: url('../static/img/bacground-planosKing2.png');
     background-size: contain;
     background-position: center top;
@@ -641,7 +635,10 @@ nav ul li:hover .divsubMenu{
     display: flex;
     justify-content: flex-end;
     align-items: end;
+    margin-bottom: 64px;
+    margin-top: 503px;
 }
+
 .container-texto-plano{
     width: 40%;
     height: 300px;
@@ -672,8 +669,8 @@ nav ul li:hover .divsubMenu{
     width: 85vw;
     height: 28%;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container-card-E-info{
@@ -686,6 +683,8 @@ nav ul li:hover .divsubMenu{
     align-items: center;
     justify-content: space-around;
     border-radius: 25px;
+    padding: 15px;
+    margin-top: 200px;
 }
 
 .container-img-car{
@@ -708,6 +707,9 @@ nav ul li:hover .divsubMenu{
     color: #d6d6d6;
     border-right: 7px solid #ad1818;
     border-radius: 5px;
+    opacity: 1;
+    animation: deslocarEsquerda 0.8s ease-in forwards ;
+    
 }
 .paragrafo-li-planos{
     font-size: 3rem;
@@ -724,6 +726,24 @@ nav ul li:hover .divsubMenu{
     justify-content: center;
 }
 
+@keyframes deslocarEsquerda {
+    0%{
+        transform: scaleX(0);
+        opacity: 0;
+        color: rgba(216, 216, 216, 0);
+        border-right: 7px solid #ad1818;
+    }
+    
+    
+    100%{
+        transform: scaleX(100%);
+        opacity: 1;
+        color: #d6d6d6;
+        border-right: 7px solid #ad1818;
+    }
+    
+    /* animation: deslocarEsquerda 1s ease-in-out 1s infinite ; */
+}
 
 
 .texto-info{
@@ -761,9 +781,20 @@ nav ul li:hover .divsubMenu{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    animation: apareceCheck 0.8s ease-in 1s forwards;
+    opacity: 0;
 }
 .texto-info ul li img{
     height: 30px;
+}
+@keyframes apareceCheck {
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
 }
 .container-chek-li{
     width: 50%;
@@ -784,6 +815,43 @@ nav ul li:hover .divsubMenu{
     color: #d8d8d8;
     box-shadow: 0px 0px 9px 0px #a4a4a47d;
 }
+.btn-king-1:hover{
+    color: #b2b2b2;
+}
+
+
+
+.container-valor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    animation: apareceCheck 0.8s ease-in 1.5s forwards;
+    opacity: 0;
+}
+.container-valor p, .container-valor h2{
+    font-size: 48px;
+    padding: 5px;
+}
+.container-valor h2{
+    margin: 0;
+}
+.container-valor p{
+    border-right: solid 7px #ad1818;
+    border-radius: 5px;
+    padding: 5px 20px 5px 5px;
+}
+
+.valor{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 
