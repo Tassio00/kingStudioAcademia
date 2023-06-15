@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King Studio</title>
+    <title>King Studio - Sobre</title>
     <link rel="stylesheet" href="./sobre_nos.css">
+
+    <!-- navbar e fontes: -->
+
+    <link rel="stylesheet" href="../nav/nav.css">
+    <script src="../nav/nav.js" defer></script>
+    <link rel="stylesheet" href="../static/fonts/fonts.css">
+    <!-- navbar e fontes: -->
 
     <!-- Scripts e Css do Modal -->
     <link rel="stylesheet" href="../modal/css/modal.css">
@@ -24,7 +31,7 @@
     <!-- END - Scripts e Css do Modal -->
 </head>
 
-<body>
+<body class="fontCentury">
     <!-- spinner de carregamento formulario => MODAL -->
     <div class="spinner-border text-danger hide" role="status" id="spinner" >
         <span class="sr-only"></span>
@@ -32,8 +39,8 @@
     <div id="fade-spinner" class="hide"></div>
     <!-- ELEMENTOS => MODAL -->
     <div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
-        <div class="modal-header">
+    <div id="modal" class="hide fontCentury">
+        <div class="modal-header fontCentury">
             <h2>Formulário de Solicitação de Matrícula</h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
                 viewBox="0 0 16 16" id="close-modal">
@@ -41,7 +48,7 @@
                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
             </svg>
         </div>
-        <div class="modal-body">
+        <div class="modal-body fontCentury">
             <!-- Make sure you don't change the form action-->
             <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()" >
                 <!-- Replace with accesKey sent to your email -->
@@ -135,26 +142,133 @@
     </div>
 
 
-    <!-- END - ELEMENTOS => MODAL -->
+
+
+
+    <div id="fade_hamburguer"></div>
+
+    <div class="hamburguer">
+
+        <div id="x-burguer" class="img-X-hamburguer"><img id="imagemDoX" src="../static/svg/x-icon.svg" alt="x"></div>
+
+        <ul id="ul-hamburguer">
+            <a href="#">
+                <li>
+                    <p class="fontking">SOBRE NÓS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">EQUIPE</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">SHORÁRIOS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">PLANOS</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+
+
+
 
     <nav>
-        <img id="logoNav"src="../static/svg/logoKing-escrito-rei.svg" alt="logo">
-        <ul>
-            <li id="teste">
-                <p>SOBRE NOS</p>
+
+        <a href="#">
+            <div class="barras-burguer"><img src="../static/svg/burguer-icon.svg" alt="img"></div>
+        </a>
+
+
+        <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
+
+
+        <ul class="ul-principal-nav">
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">SOBRE NÓS</p>
+                </a>
             </li>
             <li>
-                <p>HORÁRIOS</p>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">EQUIPE</p>
+                </a>
             </li>
-            <li class="li-drop">
-                <p>PLANOS</p>
-                <img class="seta" src="../static/svg/seta-icon.svg" alt="seta">
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">HORÁRIOS</p>
+                </a>
             </li>
-            <li id="nav-matricule-se">
-                <p>MATRICULE-SE</p>
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">PLANOS</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
+                            </a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
+
+        <div class="matricule-se" id="nav-matricule-se">
+            <a href="#">
+                <strong>
+                    <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
+                </strong>
+            </a>
+        </div>
+
     </nav>
+
+    <!-- Apartir daqui começa outra tela -->
+
+    <main>
+        <div class="sobre">
+            <div class="modulo">
+                <h1 class="fontking">Sobre King Studio </h1>
+                <p>Somos uma academia dedicada ao seu bem-estar e à sua busca por uma vida mais saudável e ativa. No King Studio, acreditamos que o exercício físico é uma parte essencial para alcançar uma mente equilibrada e um corpo em forma. Nossa equipe apaixonada e altamente qualificada está pronta para ajudá-lo(a) em cada passo dessa jornada.</p>
+                <p>Na King Studio, acreditamos que a jornada para a saúde e o bem-estar é mais do que apenas exercícios físicos. Portanto, também oferecemos serviços complementares, como aconselhamento nutricional e programas de bem-estar, para ajudá-lo(a) a adotar um estilo de vida equilibrado e sustentável.</p>
+            </div>
+            <video src="../sobre nos/video/video_king_sobre.mp4" height="350px" autoplay muted loop id="video-king-sobre"></video>
+        </div>
+        <div class="barra-principal">
+            <p>oi</p>
+        </div>
+        <div class="container-localizacao">
+            <div class="localizacao">
+                <div class="modulo modulo-localizacao">
+                    <h1 class="fontking">LOCAL </h1>
+                    <p>Você encontrará o King Studio em uma localização central e conveniente, na <strong>Avenida Papa João XXIII, número 740</strong>. Nossa academia está estrategicamente situada em uma área de fácil acesso, tornando-se o destino ideal para aqueles que buscam um estilo de vida ativo na região.</p>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3485.937296666082!2d-49.632189784906785!3d-29.107532482232827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDA2JzI3LjEiUyA0OcKwMzcnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1685574022016!5m2!1spt-BR!2sbr"  id="mapa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <br>
+    <br><br><br><br>
+    <br><br><br><br>
 
 </body>
 
