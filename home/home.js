@@ -26,16 +26,17 @@ function passarSlide() {
 var divInfoS  = document.getElementById("infoS");
 var divInfoA  = document.getElementById("infoA");
 var divInfoM  = document.getElementById("infoM");
-var btn1 = document.getElementById("btn-mostra-esconde-semestral");
-var btn2 = document.getElementById("btn-mostra-esconde-anoal");
-var btn3 = document.getElementById("btn-mostra-esconde-mensal");
+
+var btn1 = document.getElementById("btn-mostra-esconde-mensal");
+var btn2 = document.getElementById("btn-mostra-esconde-semestral");
+var btn3 = document.getElementById("btn-mostra-esconde-anoal");
 
 btn1.addEventListener("click", function() {
-    divInfoS.classList.toggle("esconde");
+    divInfoM.classList.toggle("esconde");
 });
 
 
-function mudarTextobtnS() {
+function mudarTextobtnM() {
     if (btn1.textContent === "Ver mais") {
         btn1.innerHTML= "Ver menos";
     }else{
@@ -46,10 +47,10 @@ function mudarTextobtnS() {
 
 
 btn2.addEventListener("click", function() {
-    divInfoA.classList.toggle("esconde");
+    divInfoS.classList.toggle("esconde");
 });
 
-function mudarTextobtnA() {
+function mudarTextobtnS() {
     if (btn2.textContent === "Ver mais") {
         btn2.innerHTML= "Ver menos";
     }else{
@@ -59,10 +60,10 @@ function mudarTextobtnA() {
 };
 
 btn3.addEventListener("click", function() {
-    divInfoM.classList.toggle("esconde");
+    divInfoA.classList.toggle("esconde");
 });
 
-function mudarTextobtnM() {
+function mudarTextobtnA() {
     if (btn3.textContent === "Ver mais") {
         btn3.innerHTML= "Ver menos";
     }else{
