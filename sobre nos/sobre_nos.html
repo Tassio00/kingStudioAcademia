@@ -8,6 +8,13 @@
     <title>King Studio - Sobre</title>
     <link rel="stylesheet" href="./sobre_nos.css">
 
+    <!-- navbar e fontes: -->
+
+    <link rel="stylesheet" href="../nav/nav.css">
+    <script src="../nav/nav.js" defer></script>
+    <link rel="stylesheet" href="../static/fonts/fonts.css">
+    <!-- navbar e fontes: -->
+
     <!-- Scripts e Css do Modal -->
     <link rel="stylesheet" href="../modal/css/modal.css">
     <script src="../modal/js/modal.js" defer></script>
@@ -26,14 +33,14 @@
 
 <body class="fontCentury">
     <!-- spinner de carregamento formulario => MODAL -->
-    <div class="spinner-border text-danger hide" role="status" id="spinner">
+    <div class="spinner-border text-danger hide" role="status" id="spinner" >
         <span class="sr-only"></span>
     </div>
     <div id="fade-spinner" class="hide"></div>
     <!-- ELEMENTOS => MODAL -->
     <div id="fade" class="hide"></div>
-    <div id="modal" class="hide"> 
-        <div class="modal-header">
+    <div id="modal" class="hide fontCentury">
+        <div class="modal-header fontCentury">
             <h2>Formulário de Solicitação de Matrícula</h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
                 viewBox="0 0 16 16" id="close-modal">
@@ -41,9 +48,9 @@
                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
             </svg>
         </div>
-        <div class="modal-body">
+        <div class="modal-body fontCentury">
             <!-- Make sure you don't change the form action-->
-            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()">
+            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()" >
                 <!-- Replace with accesKey sent to your email -->
                 <input type="hidden" name="accessKey" value="82ada6d6-528a-4025-ba3c-f13854acf2d7" required>
                 <!-- Required -->
@@ -126,8 +133,7 @@
                 <input type="text" value="Solicitação de Matrícula" name="subject" style="display: none;">
 
                 <!-- If you want form to redirect to a specific url after submission -->
-                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/modal/formularioenviado.html">
-                <!-- Optional -->
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/modal/formularioenviado.html"> <!-- Optional -->
                 <!-- If we receive data in this field submission will be ignored -->
                 <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
                 <div class="enviar"><input type="submit" value="Enviar" class="submit" /></div>
@@ -136,26 +142,107 @@
     </div>
 
 
-    <!-- END - ELEMENTOS => MODAL -->
+
+
+
+    <div id="fade_hamburguer"></div>
+
+    <div class="hamburguer">
+
+        <div id="x-burguer" class="img-X-hamburguer"><img id="imagemDoX" src="../static/svg/x-icon.svg" alt="x"></div>
+
+        <ul id="ul-hamburguer">
+            <a href="#">
+                <li>
+                    <p class="fontking">SOBRE NÓS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">EQUIPE</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">SHORÁRIOS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">PLANOS</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+
+
+
 
     <nav>
-        <img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo">
-        <ul>
-            <li id="teste">
-                <p>SOBRE NOS</p>
+
+        <a href="#">
+            <div class="barras-burguer"><img src="../static/svg/burguer-icon.svg" alt="img"></div>
+        </a>
+
+
+        <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
+
+
+        <ul class="ul-principal-nav">
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">SOBRE NÓS</p>
+                </a>
             </li>
             <li>
-                <p>HORÁRIOS</p>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">EQUIPE</p>
+                </a>
             </li>
-            <li class="li-drop">
-                <p>PLANOS</p>
-                <img class="seta" src="../static/svg/seta-icon.svg" alt="seta">
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">HORÁRIOS</p>
+                </a>
             </li>
-            <li id="nav-matricule-se">
-                <p>MATRICULE-SE</p>
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">PLANOS</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
+                            </a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
+
+        <div class="matricule-se" id="nav-matricule-se">
+            <a href="#">
+                <strong>
+                    <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
+                </strong>
+            </a>
+        </div>
+
     </nav>
+
+    <!-- Apartir daqui começa outra tela -->
 
     <main>
         <div class="sobre">
