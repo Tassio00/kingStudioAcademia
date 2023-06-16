@@ -1,4 +1,7 @@
-
+/* Este codigo deve ser iseridio na home para corrigir o tamanho da fonte do modal de formulario
+#modal label, input, select{
+    font-size: 170%!important;
+} */
 #close-modal{
     width: 1.8rem;
     height: 1.8rem;
