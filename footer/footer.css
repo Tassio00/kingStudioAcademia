@@ -1,9 +1,83 @@
 footer{
     color: #d6d6d6;
-    background-color: #000000;
-    height: 400px;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 700px;
 }
 
 .container-principal-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 2% 2% 2%;
+    gap: 60px;
+}
+
+.container-principal-footer svg{
+    width: 20rem;
     
+}
+
+.container-principal-footer ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: x-large;
+}
+
+.contato-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-footer a{
+    border-radius: 50%;
+    border: #b90909 solid;
+    margin: 20px;
+}
+
+.icon-rede{
+    width: 30px;
+    color: brown;
+    margin: 20px;
+}
+
+.contato-footer a:hover{
+    scale: 1.1;
+}
+.icon-rede:hover{
+    color: #e63e3e;
+}
+
+.origin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10%;
+    margin-top: 5%;
+}
+
+
+@media (max-width: 600px){
+    
+    .container-principal-footer svg{
+        width: 16rem;
+    }
+    .container-principal-footer ul{
+        gap: 20px;
+        font-size: medium;
+    }
+    .icon-rede{
+        width: 24px;
+        margin: 10px;
+    }
 }
