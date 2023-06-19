@@ -1,4 +1,6 @@
-
+html{
+  overflow-y: hidden !important;
+}
 #popup-modal{
     position: fixed;
     z-index: 20;

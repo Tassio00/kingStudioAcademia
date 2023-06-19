@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King Studio</title>
-    <link rel="stylesheet" href="../sobre nos/sobre_nos.css">
+    <link rel="stylesheet" href="../modal/css/modal.css">
 
     <!-- Scripts e Css do Modal -->
     <!-- Scripts e Css do PopupModal -->
@@ -24,6 +24,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"
         defer></script>
+    <script src="../nav/nav.js" defer></script>
+    <link rel="stylesheet" href="../nav/nav.css">
+    <link rel="stylesheet" href="../home/carrossel.css">
+    <link rel="stylesheet" href="../home/home.css">
     <!-- END - Scripts e Css do Modal -->
 </head>
 
@@ -139,7 +143,7 @@
                 <strong>
                     <h2>Solicitação de Matrícula enviada com Sucesso!</h2>
                 </strong>
-                <a href="../home.html">
+                <a href="../home/home.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-x-lg" viewBox="0 0 16 16" id="close-modal-popup">
                         <path
@@ -162,21 +166,167 @@
 
 
     <nav>
-        <img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo">
-        <ul>
-            <li id="teste">
+
+        <a href="#">
+            <div class="barras-burguer"><img src="../static/svg/burguer-icon.svg" alt="img"></div>
+        </a>
+
+
+        <a class="linkLogonav" href="../home/home.html"><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg"
+                alt="logo"></a>
+
+
+        <ul class="ul-principal-nav">
+            <li>
+                <a class="cor-nav-elementos" href="../sobre nos/sobre_nos.html">
+                    <p class="fontking">SOBRE NÓS</p>
+                </a>
             </li>
             <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">EQUIPE</p>
+                </a>
             </li>
-            <li class="li-drop">
 
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">MODALIDADES</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul class="left ">
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathFuncional">
+                                <p class="fontking fonteTamanhoDrop">FUNCIONAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop"
+                                href="../modalidades/modalidades.html#pathTerapiaGrupo">
+                                <p class="fontking fonteTamanhoDrop">AULAS EM GRUPO</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathTerapia">
+                                <p class="fontking fonteTamanhoDrop">TERAPIA MANUAIS</p>
+                            </a></li>
+                    </ul>
+                </div>
             </li>
-            <li id="nav-matricule-se">
 
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">PLANOS</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul>
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoMensal">
+                                <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoSemestral">
+                                <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoAnoal">
+                                <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
+                            </a>
+                        </li>
+                        <li class="centraliza allPlanos"><a class="linkDrop" href="../planos/planos.html">
+                                <p class="fontking fonteTamanhoDrop">VER TODOS</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
+
+        <div class="matricule-se" id="nav-matricule-se">
+            <a href="#">
+                <strong>
+                    <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
+                </strong>
+            </a>
+        </div>
+
     </nav>
 
+    <!-- Apartir daqui começa outra tela -->
+
+    
+
+    <section class="slider">
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro">
+                <img class="img-desktop" src="../static/img/carrosel_site_kingstudio1.png" alt="img">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="../static/img/carrosel_site_kingstudio2.png" alt="img">
+            </div>
+
+            <div class="slide-box">
+                <img class="img-desktop" src="../static/img/carrosel_site_kingstudio1.png" alt="img">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- qualidades -->
+
+    <section class="sessao2">
+        <div class="container-qualidades">
+            <div class="card-qualidade">
+                <img class="img-qualidade" src="../static/svg/ducha-icon.svg" alt="imagem ducha">
+                <div class="container-texto">
+                    <p class="texto-duchas">DUCHAS</p>
+                </div>
+            </div>
+            <div class="card-qualidade">
+                <img class="img-qualidade" src="../static/svg/maquina-icon.svg" alt="imagem maquinas">
+                <div class="container-texto">
+                    <p class="texto-maquinas">VARIEDADE DE MÁQUINAS</p>
+                </div>
+            </div>
+            <div class="card-qualidade">
+                <img class="img-qualidade" src="../static/svg/estacionamento-icon.svg" alt="imagem estacionamento">
+                <div class="container-texto">
+                    <p class="texto-estacionamento">ESTACIONAMENTO</p>
+                </div>
+            </div>
+            <div class="card-qualidade">
+                <img class="img-qualidade" src="../static/svg/equipe-icon.svg" alt="imagem equipe">
+                <div class="container-texto">
+                    <p class="texto-equipe">EQUIPE ESPECIALIZADA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- qualidades -->
 
 
 </body>
