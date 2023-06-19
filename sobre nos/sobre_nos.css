@@ -1,6 +1,5 @@
-body{
+html, body{
     margin: 0;
-    
 }
 
 *{
@@ -9,63 +8,192 @@ body{
     box-sizing: border-box;
 }
 
-nav{
-    background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
-    box-shadow: 0px 6px 19px #00000033;
-    height: 150px;
+
+main{
     display: flex;
-    flex-flow: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
- 
-}
-
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-    padding-right: 5%;
-    color: rgb(255, 255, 255);
-
-}
-
-nav ul li{
-    padding: 0;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-}
-#nav-matricule-se{
-    color: #ce2c2c;
-    background-color: rgb(255, 240, 240);
-    box-shadow: 0px 6px 19px #00000033;
-    width: 250px;
-    height: 60px;
-    font-size: 24px;
-    border-radius: 100px;
     justify-content: center;
-    
-    
+    margin-top: 5%;
 }
 
-.li-drop{
+.sobre{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    gap: 45px;
+    width: 1000px;
+    max-width: 95%;
+    text-align: justify;
+    margin: 2rem;
+}
+
+.modulo{
+    color:#ad1818;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: initial;
+    margin-top: 2%;
+}
+
+.modulo h1 {
+    color: #ce2c2c;
+    margin-bottom: 1rem;
+}
+
+.modulo p {
+    color: #595959;
+    margin-bottom: .5rem;
+}
+
+#video-king-sobre{
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    background-color: #595959;
+}
+
+.barra-principal{
+    background: linear-gradient(138deg, rgb(0, 0, 0) 0%, rgb(104, 104, 104) 58%, rgb(0, 0, 0) 100%);
+    box-shadow: 0px 0px 19px 16px #00000033;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+#img-leg{
+    height: 400px;
+}
+
+.conteudo-leg{
+    color: #dddddd;
+}
+
+.conteudo-leg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    margin: 5%;
+    gap: 5%;
+    text-align: center;
+}
+.conteudo-leg p{
+    font-size: x-large;
+}
+
+.localizacao{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    margin: 2rem;
+}
+
+.modulo-localizacao{
+    width: 1000px;
+    max-width: 95%;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modulo-localizacao h1 {
+    font-size: 4rem;
+    color: #f3f3f3;
+}
+.modulo-localizacao p{
+    color: #dddddd;
+}
+.modulo-localizacao strong{
+    color: #ffffff;
+}
+
+#mapa{
+    width: 98%;
+    height: 450px;
+    border: #0a0a0a solid 2px;
+    transition: .3s;
+    margin-bottom: 4rem;
+}
+
+#mapa:hover{
+    transition: .3s;
+    box-shadow: 0px 0px 19px 16px #ffffff70; 
+}
+
+.container-localizacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b80404;
+    width: 100%;
 }
 
 
-.seta{
-    height: 10px;
+@media (max-width: 1390px){
+    
+    .conteudo-leg{
+        
+    }
+    .conteudo-leg p{
+        font-size: large;
+    }
 }
 
-#logoNav{
-    height: 100px;
-    padding-left: 5%;
+@media (max-width: 1110px){
+    
+    .conteudo-leg{
+        
+    }
+    .conteudo-leg p{
+        font-size:medium;
+    }
+
+    #img-leg{
+        height: 300px;
+    }
+}
+@media (max-width: 980px){
+    
+    .conteudo-leg p{
+        font-size:medium;
+    }
+    .conteudo-leg h1{
+        font-size:xx-large;
+    }
+
+    #img-leg{
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px){
+    
+    .sobre{
+        flex-direction: column-reverse;
+    }
+    #video-king-sobre{
+        height: 690px;
+    }
+    .barra-principal{
+        padding-top: 10%;
+        flex-direction: column;
+    }
+    .conteudo-leg {
+        margin: 10%;
+    }
+}
+@media (max-width: 580px){
+    
+    #img-leg{
+        height: 200px;
+    }
+    
 }

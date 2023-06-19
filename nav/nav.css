@@ -28,7 +28,7 @@ nav{
     background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
     box-shadow: 0px 6px 19px #00000033;
     height: 150px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-flow: nowrap;
     flex-direction: row;
@@ -59,7 +59,7 @@ nav ul{
 nav ul li{
     color: #ffffff;
     padding: 0;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,7 +82,7 @@ nav ul li{
     width: 250px;
     height: 60px;
     margin: 0px 10px;
-    font-size: 2.75rem;
+    font-size: 1.75rem;
     border-radius: 100px;
     justify-content: center;
     display: flex;
@@ -97,7 +97,7 @@ nav ul li{
 }
 .cor-Matricule-se:hover{
     color: #d41414;
-    font-size: 2.9rem;
+    font-size: 1.8rem;
     transition: 0.5s;
     
 }
@@ -135,7 +135,7 @@ nav ul li{
 }
 
 .fonteTamanhoDrop{
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     padding: 7px 10px;
     color: #ffffff;
     
@@ -152,6 +152,7 @@ nav ul li{
     flex-direction: column;
     align-items: center;
     position: absolute;
+    width: 200px;
     white-space: pre;
     left: -22px;
     border-radius: 10px;
@@ -160,7 +161,6 @@ nav ul li{
 }
 .divsubMenu ul li:hover{
     
-    border-radius: 10px;
     width: 100%;
 }
 
@@ -195,7 +195,6 @@ nav ul li:hover .divsubMenu{
 
 .linkDrop{
     text-align: center;
-    height: 110px;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -215,7 +214,7 @@ nav ul li:hover .divsubMenu{
     display: flex;
 }
 #logoNav{
-    height: 100px;
+    height: 80px;
     
 }
 /*FIM Estilo do drop Menu*/
@@ -250,6 +249,22 @@ nav ul li:hover .divsubMenu{
     display: none;
 }
 
+.left{
+    left: 0px !important;
+}
+
+.allPlanos{
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+.allPlanos p{
+    color: #ad1818;
+}
+.allPlanos p:hover{
+    color: #780505;
+}
 
 /*FIM Estilo do Navbar*/
 
@@ -266,10 +281,10 @@ nav ul li:hover .divsubMenu{
 /*Media 1 */
 @media (max-width: 1300px){
     nav ul li, #nav-matricule-se{
-        font-size: 2.2rem;
+        font-size: 1.2rem;
     }
     .cor-Matricule-se:hover{
-        font-size: 2.3rem;
+        font-size: 1.3rem;
     }
 
     #nav-matricule-se{
@@ -277,13 +292,29 @@ nav ul li:hover .divsubMenu{
         height: 50px;
     }
     #logoNav {
-        height: 80px;
+        height: 68px;
     }
     #x-burguer img{
         height: 60px;
         padding: 15px;
         cursor: pointer;
     }
+
+
+    .divsubMenu ul{
+        white-space: nowrap;
+        width: 150px;
+
+    }
+
+    .fonteTamanhoDrop {
+        font-size: 1rem;
+       
+    }
+    .left{
+        left: 0px;
+    }
+
     
     
 }
@@ -328,7 +359,7 @@ nav ul li:hover .divsubMenu{
         color: #ffffff;
         width: 100%;
         height: 60px;
-        font-size: 2rem;
+        font-size: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -394,11 +425,6 @@ nav ul li:hover .divsubMenu{
         display: none;
     }
 
-
-    .slider{
-        display: none;
-    }
-
     
     .barras-burguer{
         display: block;
@@ -409,29 +435,6 @@ nav ul li:hover .divsubMenu{
         display: block;
     }
 
-    .container-qualidades{
-        justify-content: space-between;
-    }
-    .img-qualidade{
-        height: 100px;
-    }
-    
-    .texto-duchas{
-        font-size: 1.9rem;
-    }
-    
-    .texto-maquinas, .texto-equipe, .texto-estacionamento{
-        font-size: 1.7rem;
-        text-align: center;
-    }
-    .container-texto{
-        height: 100px;
-        text-align: center;
-        display: flex;
-        flex-flow: wrap;
-        align-items: center;
-        
-    }
 
  
 }
@@ -444,27 +447,6 @@ nav ul li:hover .divsubMenu{
         height: 50px;
     }
 
-    .card-qualidade{
-        width: 15%;
-    }
-
-    .texto-duchas{
-        font-size: 1.5rem;
-    }
-    
-    .texto-maquinas, .texto-equipe, .texto-estacionamento{
-        font-size: 1.3rem;
-    }
-    
-    .texto-maquinas{
-        font-size: 1.2;
-    }
-    .img-qualidade{
-        height: 90px;
-    }
-    .container-texto{
-        width: 180%;
-    }
 
     
 }
@@ -496,13 +478,19 @@ nav ul li:hover .divsubMenu{
     }
 
     .cor-Matricule-se{
-        font-size: 1.5rem;
+        font-size: 0.8rem;
     }
     .cor-Matricule-se:hover{
-        font-size: 1.6rem;
+        font-size: 0.9rem;
     }
 
 }
+
+@media (max-width: 400px){
+    
+
+}
+
 
 
 /*FIM Responsividade Navbar*/

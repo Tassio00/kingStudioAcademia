@@ -1,3 +1,9 @@
+#modal label, input, select{
+    font-size: .9rem!important;
+}
+.modal-header h2{
+    font-size: 1.5rem!important;
+}
 
 #close-modal{
     width: 1.8rem;
