@@ -158,7 +158,7 @@
         <div id="x-burguer" class="img-X-hamburguer"><img id="imagemDoX" src="../static/svg/x-icon.svg" alt="x"></div>
 
         <ul id="ul-hamburguer">
-            <a href="#">
+            <a href="../sobre nos/sobre_nos.html">
                 <li>
                     <p class="fontking">SOBRE NÓS</p>
                 </li>
@@ -168,12 +168,12 @@
                     <p class="fontking">EQUIPE</p>
                 </li>
             </a>
-            <a href="#">
+            <a href="../modalidades/modalidades.html">
                 <li>
-                    <p class="fontking">SHORÁRIOS</p>
+                    <p class="fontking">MODALIDADES</p>
                 </li>
             </a>
-            <a href="#">
+            <a href="../planos/planos.html">
                 <li>
                     <p class="fontking">PLANOS</p>
                 </li>
@@ -192,12 +192,12 @@
         </a>
 
 
-        <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
+        <a class="linkLogonav" href="../home/home.html"><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
 
 
         <ul class="ul-principal-nav">
             <li>
-                <a class="cor-nav-elementos" href="#">
+                <a class="cor-nav-elementos" href="../sobre nos/sobre_nos.html">
                     <p class="fontking">SOBRE NÓS</p>
                 </a>
             </li>
@@ -206,11 +206,33 @@
                     <p class="fontking">EQUIPE</p>
                 </a>
             </li>
-            <li>
-                <a class="cor-nav-elementos" href="#">
-                    <p class="fontking">HORÁRIOS</p>
-                </a>
+            
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">MODALIDADES</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul class="left ">
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathFuncional">
+                                <p class="fontking fonteTamanhoDrop">FUNCIONAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathTerapiaGrupo">
+                                <p class="fontking fonteTamanhoDrop">AULAS EM GRUPO</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathTerapia">
+                                <p class="fontking fonteTamanhoDrop">TERAPIA MANUAIS</p>
+                            </a></li>
+                    </ul>
+                </div>
             </li>
+
             <li class="" id="planosNav">
                 <div class="cor-nav-planos li-drop">
                     <p class="fontking">PLANOS</p>
@@ -224,15 +246,20 @@
                 </div>
                 <div class="divsubMenu">
                     <ul>
-                        <li class="centraliza"><a class="linkDrop" href="">
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoMensal">
                                 <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
                             </a></li>
-                        <li class="centraliza"><a class="linkDrop" href="">
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoSemestral">
                                 <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
                             </a></li>
-                        <li class="centraliza"><a class="linkDrop" href="">
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoAnoal">
                                 <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
-                            </a></li>
+                            </a>
+                        </li>
+                        <li class="centraliza allPlanos"><a class="linkDrop" href="../planos/planos.html">
+                            <p class="fontking fonteTamanhoDrop">VER TODOS</p>
+                        </a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -368,7 +395,7 @@
 
                     
                     <a href="#">
-                        <img class="img-car" src="../static/img/plano-mensal.png" alt="img plano semestral">
+                        <img class="img-car" id="imgplanoMensal" src="../static/img/plano-mensal.png" alt="img plano semestral">
                     </a>
                     
 
@@ -404,7 +431,7 @@
 
                     
                     <a href="#">
-                        <img class="img-car" src="../static/img/plano-semestral.png">
+                        <img class="img-car" id="imgplanoSemestral" src="../static/img/plano-semestral.png">
                     </a>
                     
 
@@ -441,8 +468,8 @@
                  <div class="container-card-E-info margemButton">
 
                     
-                    <a href="#">
-                        <img class="img-car" src="../static/img/plano-anoal.png">
+                    <a href="../planos/planos.html" >
+                        <img class="img-car" id="imgplanoAnoal" src="../static/img/plano-anoal.png">
                     </a>
                     
 
@@ -522,7 +549,7 @@
             </div>
         </div>
 
-        <div class="container-beneficios">
+        <div class="container-beneficios " id="teste">
             <div class="conteudo-beneficios ">
                 <div class="container-texto-beneficios">
                     <h2>Vamos alcançar seu resultado!</h2>

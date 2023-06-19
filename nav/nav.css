@@ -152,6 +152,7 @@ nav ul li{
     flex-direction: column;
     align-items: center;
     position: absolute;
+    width: 200px;
     white-space: pre;
     left: -22px;
     border-radius: 10px;
@@ -160,7 +161,6 @@ nav ul li{
 }
 .divsubMenu ul li:hover{
     
-    border-radius: 10px;
     width: 100%;
 }
 
@@ -214,7 +214,7 @@ nav ul li:hover .divsubMenu{
     display: flex;
 }
 #logoNav{
-    height: 100px;
+    height: 80px;
     
 }
 /*FIM Estilo do drop Menu*/
@@ -249,6 +249,22 @@ nav ul li:hover .divsubMenu{
     display: none;
 }
 
+.left{
+    left: 0px !important;
+}
+
+.allPlanos{
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+.allPlanos p{
+    color: #ad1818;
+}
+.allPlanos p:hover{
+    color: #780505;
+}
 
 /*FIM Estilo do Navbar*/
 
@@ -276,13 +292,29 @@ nav ul li:hover .divsubMenu{
         height: 50px;
     }
     #logoNav {
-        height: 80px;
+        height: 68px;
     }
     #x-burguer img{
         height: 60px;
         padding: 15px;
         cursor: pointer;
     }
+
+
+    .divsubMenu ul{
+        white-space: nowrap;
+        width: 150px;
+
+    }
+
+    .fonteTamanhoDrop {
+        font-size: 1rem;
+       
+    }
+    .left{
+        left: 0px;
+    }
+
     
     
 }
