@@ -1,0 +1,55 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+.bg-image{
+    /* background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img1.jpg'); */
+    background-image: url('./img/borrao-abstrata-e-equipamento-de-fitness-desfocado-no-interior-do-ginasio-fundo-desfocado-foto.jpg');
+    background-attachment:local;
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+
+/* TABELA STYLE: */
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+tbody td {
+  font-weight: 500;
+  color: #999999;
+}
+
+.table{
+  margin: 0px !important;
+}
+
+.cor-thead-mensal{
+  background-color:#fdf6de !important;
+}
+.cor-thead-semestral{
+  background-color:#f5e09c !important;
+}
+.cor-thead-anual{
+  background-color:#fcc2a1 !important;
+}
+
+.cor-td-mensal{
+  background-color:#fdf8f4 !important;
+}
+.cor-td-semestral{
+  background-color:#fff1be !important;
+}
+.cor-td-anual{
+  background-color:#ffe6d8 !important;
+}
