@@ -4,6 +4,10 @@ body,
   height: 100%;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 .bg-image{
     /* background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img1.jpg'); */
     background-image: url('./img/borrao-abstrata-e-equipamento-de-fitness-desfocado-no-interior-do-ginasio-fundo-desfocado-foto.jpg');
