@@ -1,5 +1,6 @@
 html{
     color: #191919; 
+    overflow-x: hidden!important;
 }
 
 /* Este codigo deve ser iseridio na home para corrigir o tamanho da fonte do modal de formulario*/
@@ -98,130 +99,16 @@ p{
     
     
 }
-/*Media 2 */
+/*Media 1100 */
 @media (max-width: 1100px){
-
-    #logoNav{
-        height: 70px;
-    }
-
-    .ul-principal-nav{
-        display: none;
-    }
-    .barras-burguer{
-        height: 50px;
-        padding-left: 20px;
-        z-index: 3;
-        
-    }
-
-    .barras-burguer{
-        display: block;
-    }
-
-    nav{
-        justify-content: space-between; 
-        height: 115px;
-    }
-
-    .hamburguer ul{
-        list-style: none;
-        padding: 0;
-        width: 100%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        text-align: center;
-
-    }
-
-    #ul-hamburguer li{
-        color: #ffffff;
-        width: 100%;
-        height: 60px;
-        font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-bottom: #424242 solid 0.5px;
-    }
-
-    #ul-hamburguer li:hover{
-        color: #d8d8d8;
-        background-color: #dbdbdb;
-        transition: 0.3s;
-    }
-    #ul-hamburguer li p:hover{
-
-    }
-    #ul-hamburguer li:hover{
-        color: #ffffff;
-    }
-    
-    #ul-hamburguer li p{
-        margin: 0;
-        color: #981c1c;
-
-    }
-
-    #ul-hamburguer {
-        margin: 0;
-
-    }
-    
-    .barras-burguer img{
-        width: 50px;
-        align-self: flex-end;
-        z-index: 2;
-        
-    }
-
-    #x-burguer img{
-        height: 60px;
-        padding: 15px;
-        cursor: pointer;
-    }
-
-    #x-burguer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background: linear-gradient(138deg, rgba(153,27,27,1) 0%, rgba(238,17,17,1) 58%, rgba(153,27,27,1) 100%);
-    }
-
-    .hamburguer{
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        background-color: white;
-    }
-    #fade_hamburguer{
-        position: fixed;
-        width: 4000%;
-        height: 4000%;
-        background-color: hsla(0, 60%, 1%, 0.242);
-        z-index: 3;
-        display: none;
-    }
-
 
     .slider{
         display: none;
     }
 
-    
-    .barras-burguer{
-        display: block;
-
+    .conteudo-beneficios{
+        flex-direction: column;
     }
-  
-    #ul-hamburguer{
-        display: block;
-    }
-
-
- 
 }
 
 
@@ -664,10 +551,82 @@ p{
     justify-content: center;
 }
 
-
-
+.titulo-valor-plano h3{
+    font-size: small;
+}
+.titulo-valor-plano{
+    margin: 10px;
+}
 
 /* FIM Estilo plano*/
+
+/*FIM estilo beneficios*/
+
+.margemTop{
+    margin-top: 200px;
+}
+.margemButton{
+    margin-bottom: 200px;
+}
+
+
+
+
+.sessao4{
+    background: linear-gradient(138deg, rgba(0,0,0,1) 0%, rgba(25,1,1,1) 25%, rgba(8,2,27,1) 75%, rgba(0,0,0,1) 100%);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-beneficios{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.conteudo-beneficios{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-texto-beneficios{
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.container-img-beneficios img{
+    width: 550px;
+}
+
+.container-texto-beneficios h2{
+    color: #b2b2b2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.container-texto-beneficios p{
+    color: #b2b2b2;
+    font-size: 1rem;
+}
+
+.reverse{
+    flex-flow: row-reverse;
+}
+
+/*FIM estilo beneficios*/
+
 
 
 
@@ -757,6 +716,12 @@ p{
     }
 
       /*FIM Estilo plano*/
+    /*Media 1100 */
+
+    .conteudo-beneficios{
+        flex-direction: column;
+    }
+
 
 }
 
@@ -830,6 +795,8 @@ p{
     }
 
       /*FIM Estilo plano*/
+    
+    
     
 
 }
@@ -954,68 +921,7 @@ p{
 }
 
 
-.margemTop{
-    margin-top: 200px;
-}
-.margemButton{
-    margin-bottom: 200px;
-}
 
-
-
-
-.sessao4{
-    background: linear-gradient(138deg, rgba(0,0,0,1) 0%, rgba(25,1,1,1) 25%, rgba(8,2,27,1) 75%, rgba(0,0,0,1) 100%);
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.container-beneficios{
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-.conteudo-beneficios{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.container-texto-beneficios{
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-
-.container-img-beneficios img{
-    width: 550px;
-}
-
-.container-texto-beneficios h2{
-    color: #b2b2b2;
-    font-size: 2rem;
-    font-weight: bold;
-}
-.container-texto-beneficios p{
-    color: #b2b2b2;
-    font-size: 1rem;
-}
-
-.reverse{
-    flex-flow: row-reverse;
-}
 
 
 
