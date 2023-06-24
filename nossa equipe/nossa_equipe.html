@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe</title>
+    <link rel="stylesheet" href="./nossa_equipe.html">
+    <link rel="stylesheet" href="./nossa_equipe.css">
+    <script src="./home.js" defer></script>
+
+    <!-- navbar e fontes: -->
+
+    <link rel="stylesheet" href="../nav/nav.css">
+    <script src="../nav/nav.js" defer></script>
+    <link rel="stylesheet" href="../static/fonts/fonts.css">
+    <!-- navbar e fontes: -->
+
+    <!-- Scripts e Css do Modal -->
+    <link rel="stylesheet" href="../modal/css/modal.css">
+    <script src="../modal/js/modal.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"
+        defer></script>
+    <!-- END - Scripts e Css do Modal -->
+
+</head>
+
+<body class="fontCentury">
+
+
+
+    <!-- spinner de carregamento formulario => MODAL -->
+    <div class="spinner-border text-danger hide" role="status" id="spinner" >
+        <span class="sr-only"></span>
+    </div>
+    <div id="fade-spinner" class="hide"></div>
+    <!-- ELEMENTOS => MODAL -->
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide fontCentury">
+        <div class="modal-header fontCentury">
+            <h2>Formulário de Solicitação de Matrícula</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16" id="close-modal">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </div>
+        <div class="modal-body fontCentury">
+            <!-- Make sure you don't change the form action-->
+            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()" >
+                <!-- Replace with accesKey sent to your email -->
+                <input type="hidden" name="accessKey" value="82ada6d6-528a-4025-ba3c-f13854acf2d7" required>
+                <!-- Required -->
+                <label for="$Nome" class="col-form-label">Nome:</label>
+                <input class="form-control" type="text" name="$Nome" placeholder="Digite seu nome completo" required>
+
+                <label for="$Data de Nacimento" class="col-form-label">Data de Nacimento:</label>
+                <input class="form-control" type="date" name="$Data de Nacimento" required>
+
+                <label class="cpf" for="$cpf" class="col-form-label">CPF:</label>
+                <input class="form-control" type="number" id="cpf" name="$CPF" maxlength="14"
+                    placeholder="000.000.000-00" required>
+
+                <label for="email" class="col-form-label">Email:</label>
+                <input class="form-control" type="text" name="email" placeholder="Exemplo@email.com" required>
+
+                <label for="$Fone" class="col-form-label">Fone:</label>
+                <input class="form-control" type="number" name="$Fone" placeholder="(00) 00000-0000" required
+                    oniput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxLength="11">
+
+                <label for="$Endereço" class="col-form-label">Endereço:</label>
+                <!-- Rua  + Número da Rua -->
+                <div class="row">
+                    <div class="col">
+                        <div class="form-outline">
+                            <input class="form-control mb-2" type="text" name="$Rua" placeholder="Rua" required />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-outline">
+                            <input class="form-control mb-2" type="text" name="$Número" placeholder="N°">
+                        </div>
+                    </div>
+                </div>
+                <input class="form-control mb-2" type="text" name="$Bairro" placeholder="Bairro" required>
+                <!-- Estado  + Cidade -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                            <input class="form-control mb-2" type="text" name="$Cidade" placeholder="Cidade" required>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form-outline">
+                            <select name="$Estado" class="form-control mb-2">
+                                <option value="Santa Catarina">Santa Catarina</option>
+                                <option value="Acre">Acre</option>
+                                <option value="Alagoas">Alagoas</option>
+                                <option value="Amapá">Amapá</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Bahia">Bahia</option>
+                                <option value="Ceará">Ceará</option>
+                                <option value="Distrito Federal">Distrito Federal</option>
+                                <option value="Espírito Santo">Espírito Santo</option>
+                                <option value="Goiás">Goiás</option>
+                                <option value="Maranhão">Maranhão</option>
+                                <option value="Mato Grosso">Mato Grosso</option>
+                                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                <option value="Minas Gerais">Minas Gerais</option>
+                                <option value="Pará">Pará</option>
+                                <option value="Paraíba">Paraíba</option>
+                                <option value="Paraná">Paraná</option>
+                                <option value="Pernambuco">Pernambuco</option>
+                                <option value="Piauí">Piauí</option>
+                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                <option value="Rondônia">Rondônia</option>
+                                <option value="Roraima">Roraima</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Sergipe">Sergipe</option>
+                                <option value="Tocantins">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assunto de email -->
+                <input type="text" value="Solicitação de Matrícula" name="subject" style="display: none;">
+
+                <!-- If you want form to redirect to a specific url after submission -->
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/modal/formularioenviado.html"> <!-- Optional -->
+                <!-- If we receive data in this field submission will be ignored -->
+                <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
+                <div class="enviar"><input type="submit" value="Enviar" class="submit" /></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="fade_hamburguer"></div>
+
+    <div class="hamburguer">
+
+        <div id="x-burguer" class="img-X-hamburguer"><img id="imagemDoX" src="../static/svg/x-icon.svg" alt="x"></div>
+
+        <ul id="ul-hamburguer">
+            <a href="#">
+                <li>
+                    <p class="fontking">SOBRE NÓS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">EQUIPE</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">SHORÁRIOS</p>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <p class="fontking">PLANOS</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <nav>
+
+        <a href="#">
+            <div class="barras-burguer"><img src="../static/svg/burguer-icon.svg" alt="img"></div>
+        </a>
+
+
+        <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
+
+
+        <ul class="ul-principal-nav">
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">SOBRE NÓS</p>
+                </a>
+            </li>
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">EQUIPE</p>
+                </a>
+            </li>
+            <li>
+                <a class="cor-nav-elementos" href="#">
+                    <p class="fontking">HORÁRIOS</p>
+                </a>
+            </li>
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">PLANOS</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="">
+                                <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <div class="matricule-se" id="nav-matricule-se">
+            <a href="#">
+                <strong>
+                    <p class="fontking cor-Matricule-se">MATRICULE-SE</p>
+                </strong>
+            </a>
+        </div>
+
+    </nav>
+
+    <section class="nossa-equipe">
+        <img src="../static/img/equipeEditadoTrasparente.png" alt="Nossa Equipe">
+        <div class="descricao1">
+          <p>Na King Studio, a missão da nossa equipe é fornecer orientação personalizada.</p>
+          <br>
+          <p>Cada indivíduo possui necessidades e objetivos únicos, e os profissionais da  academia <br> estão preparados para adaptar os
+            treinos de  acordo com as metas de cada pessoa.
+        </p>
+        </div>
+        <div class="descricao2">
+            <p><br>CONHEÇA CADA INTEGRANTE DA <br> NOSSA EQUIPE DE INSTRUTORES</p>
+        </div>
+      </section>
+
+        <br>
+        <br>
+        <br>
+
+        <section class="personal-trainer-section">
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">JEAN</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Escolhi educação física quando percebi que meu propósito era atuar na área de musculação, quando queria ajudar as pessoas e ver sua evolução. A educação física é muito mais que contar repetições, estamos na linha de frente de problemas físicos e mentais, costumo dizer que não escolhi esse curso ele que me escolheu, amo tanto ela que resolvi, ter toda essa energia no meu próprio local, aonde surgiu o King Studio, método King de treinamento, onde diversos alunos se encontraram e conseguiram se manter numa rotina de exercícios, onde diversos alunos, passam para compartilhar momentos e ter resultado no processo!</p>
+                    <p class="resposta"><br>Meus objetivos são, continuar este trabalho maravilhoso, 
+                        melhorar a cada dia, espalhar para a maior quantidade de 
+                        pessoas que educação física é capaz de mudar vidas!</p>
+              </div>
+              <img src="../static/img/instrutor-jean.png" alt="Foto do Personal Trainer">
+            </div>
+
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">RAPHA</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Escolhi a faculdade de Educação física pelo contato que 
+                        tive com a musculação em si, nisso acabei me apaixonando 
+                        pelo quesito "saúde", vi que poderia ajudar as pessoas tanto 
+                        no seu físico quanto no mental, assim possibilitando-as uma 
+                        rotina de vida melhor. Meus objetivos atuais são, me tornar 
+                        um profissional sempre melhor que ontem, e para um futuro 
+                        não distante quero realizar algo que tenha um objetivo de 
+                        ajudar muitas pessoas.</p>
+              </div>
+              <img src="../static/img/instrutor-raphael.png" alt="Foto do Personal Trainer">
+            </div>
+
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">MARCELO</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Eu não escolhi a Ed.física, ela quem me escolheu.
+                        Pra mim a profissão de um professor é simplificar o conhecimento para seus alunos, também fazer com que o aluno 
+                        entenda os benefícios que a atividade física pode trazer 
+                        para sua vida. Fazer parte da rotina de alguém é muito gratificante, ver o aluno com sorriso no rosto e feliz por se sentir 
+                        melhor a cada dia é a melhor remuneração dessa profissão. 
+                        Como professor entendo que quanto mais eu me dedico 
+                        mais eu posso transformar a vida de alguém.</p>
+              </div>
+              <img src="../static/img/instrutor-marcelo.png" alt="Foto do Personal Trainer">
+            </div>
+
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">ALBERTO</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Meu motivo porque escolhi foi da seguinte forma comecei a 
+                        praticar musculação desde cedo com meus 13 anos e ali fui 
+                        praticando exercícios em casa e fui pegando o gosto desde 
+                        então procurei uma sala de musculação e foi ali que eu me 
+                        encontrei que era isto que eu queria todo dia superando a si 
+                        mesmo dando meu melhor a cada dia
+                        Meu objetivo ajudar próximo buscando sempre pela qualidade de vida. Sempre incentivando para cada aluno der 
+                        seu melhor nos treinos</p>
+              </div>
+              <img src="../static/img/instrutor-alberto.png" alt="Foto do Personal Trainer">
+            </div>
+
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">GUI</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Desde criança sempre gostei de esportes, mas principalmente futebol, amava jogar e ficava o dia todo assistindo 
+                        jogos ou programas esportivos. Tive contato com outros 
+                        esportes também como skate e muay thai, mas em 2016 
+                        quando estava no último ano da escola, eu comecei a 
+                        praticar musculação e me apaixonei. Ficava o dia inteiro 
+                        lendo e vendo vídeos sobre treinos, nutrição, suplementos, 
+                        etc.</p>
+                    <p class="resposta"><br>Foi aí que decidi que queria estudar educação física para 
+                        me aprofundar mais ainda nesses conhecimentos e futuramente exercer a profissão.
+                        Meu objetivo como profissional de educação física é 
+                        mostrar às pessoas os inúmeros benefícios que os exercícios 
+                        físicos podem trazer à elas, sejam eles físicos ou mentais.</p>
+              </div>
+              <img src="../static/img/instrutor-guilherme.png" alt="Foto do Personal Trainer">
+            </div>
+            
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">HENRIQUE</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Escolhi pois creio na saúde enquanto sendo um processo 
+                        preventivo e não paliativo, vivemos em uma sociedade 
+                        cada vez mais parada que empurra ao sedentarismo limitando e atrofiando músculos negando ao nosso corpo sua 
+                        funcionalidade, e encontro na educação física a reversão 
+                        deste problema, meus objetivos são claros e diretos que é 
+                        dar ao meu corpo o seu movimento natural e assim ter qualidade de vida ao mesmo tempo que tenho uma profissão.</p>
+              </div>
+              <img src="../static/img/instrutor-henrique.png" alt="Foto do Personal Trainer">
+            </div>
+
+            <div class="container">
+                <div class="nome">
+                    <h1 class="nome fontking">GABE</h1>
+                    <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
+                        objetivos com ela?</p>
+                    <p class="resposta"><br>Não fui eu quem escolheu e sim ela me escolheu.
+                        Cada dia mais eu me apaixono por essa profissão.
+                        É conhecer o corpo e a mente. É saber os limites e capacidade do outro através da força de vontade. É cuidar do 
+                        bem estar com responsabilidade, compreendendo que 
+                        milagre não existe quando o assunto é buscar ser saudável. 
+                        A Educação Física orienta, estimula, proporciona aos agentes humanos o conhecimento principal para conduzir as 
+                        suas atividades sem exageros. Prevenindo doenças, colocando em prática a ciência do exercício. Conversando, 
+                        dialogando, brincando e tornando o dia a dia de quem 
+                        quer ficar em dia com o seu corpo mais leve e a sua mente 
+                        mais saudável. Seja correndo nas ruas, nos estúdios, na beira 
+                        da praia, em casa, sempre terá a educação física presente 
+                        nos melhores momentos da vida da gente.</p>
+              </div>
+              <img src="../static/img/instrutora-gabriele.png" alt="Foto da Personal Trainer">
+            </div>
+
+          </section>
+</body>
+</html>
