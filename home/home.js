@@ -23,29 +23,53 @@ function passarSlide() {
 
 
 /* esconder info planos */
-var divInfo  = document.getElementById("info");
-var btn = document.getElementById("btn-mostra-esconde");
+var divInfoS  = document.getElementById("infoS");
+var divInfoA  = document.getElementById("infoA");
+var divInfoM  = document.getElementById("infoM");
 
-btn.addEventListener("click", function() {
-    
-    console.log('jj');
-    divInfo.classList.toggle("esconde");
-    
-    
+var btn1 = document.getElementById("btn-mostra-esconde-mensal");
+var btn2 = document.getElementById("btn-mostra-esconde-semestral");
+var btn3 = document.getElementById("btn-mostra-esconde-anoal");
+
+btn1.addEventListener("click", function() {
+    divInfoM.classList.toggle("esconde");
 });
 
 
+function mudarTextobtnM() {
+    if (btn1.textContent === "Ver mais") {
+        btn1.innerHTML= "Ver menos";
+    }else{
+        btn1.innerHTML= "Ver mais";
+    }
+    
+};
 
 
-// function mostrar() {
-//     if (div.style.display == "none") {
-//         console.log('ojji');
-//         div.style.display = "flex";
-//     }else{
-//         div.style.display = "none";
-//         console.log('nao');
-//     }
-// };
+btn2.addEventListener("click", function() {
+    divInfoS.classList.toggle("esconde");
+});
+
+function mudarTextobtnS() {
+    if (btn2.textContent === "Ver mais") {
+        btn2.innerHTML= "Ver menos";
+    }else{
+        btn2.innerHTML= "Ver mais";
+    }
+    
+};
+
+btn3.addEventListener("click", function() {
+    divInfoA.classList.toggle("esconde");
+});
+
+function mudarTextobtnA() {
+    if (btn3.textContent === "Ver mais") {
+        btn3.innerHTML= "Ver menos";
+    }else{
+        btn3.innerHTML= "Ver mais";
+    }
+};
 
 
 /* FIM esconder info planos */
