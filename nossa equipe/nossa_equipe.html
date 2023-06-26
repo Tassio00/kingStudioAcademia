@@ -10,12 +10,22 @@
     <link rel="stylesheet" href="./nossa_equipe.css">
     <script src="./home.js" defer></script>
 
+    <!-- fav icon -->
+    <link rel="icon" href="../static/img/faviconking3.png" type="image/x-icon">
+    <!-- fav icon -->
+
+    
+
     <!-- navbar e fontes: -->
 
     <link rel="stylesheet" href="../nav/nav.css">
     <script src="../nav/nav.js" defer></script>
     <link rel="stylesheet" href="../static/fonts/fonts.css">
     <!-- navbar e fontes: -->
+
+    <!-- style Scroll -->
+    <link rel="stylesheet" href="../scroll/scroll.css">
+    <!-- fim style Scroll -->
 
     <!-- Scripts e Css do Modal -->
     <link rel="stylesheet" href="../modal/css/modal.css">
@@ -30,7 +40,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"
         defer></script>
+    <!-- Css do Footer -->
+    <link rel="stylesheet" href="../footer/footer.css">
+    <!-- END Css do Footer -->
     <!-- END - Scripts e Css do Modal -->
+
+    <!-- Logo wpp -->
+    <link rel="stylesheet" href="../logo_wpp/logoWpp.css">
+    <!-- END -Logo wpp -->
 
 </head>
 
@@ -39,7 +56,7 @@
 
 
     <!-- spinner de carregamento formulario => MODAL -->
-    <div class="spinner-border text-danger hide" role="status" id="spinner" >
+    <div class="spinner-border text-danger hide" role="status" id="spinner">
         <span class="sr-only"></span>
     </div>
     <div id="fade-spinner" class="hide"></div>
@@ -56,7 +73,7 @@
         </div>
         <div class="modal-body fontCentury">
             <!-- Make sure you don't change the form action-->
-            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()" >
+            <form action="https://api.staticforms.xyz/submit" method="post" id="form-modal" onsubmit="submit_form()">
                 <!-- Replace with accesKey sent to your email -->
                 <input type="hidden" name="accessKey" value="82ada6d6-528a-4025-ba3c-f13854acf2d7" required>
                 <!-- Required -->
@@ -139,13 +156,18 @@
                 <input type="text" value="Solicitação de Matrícula" name="subject" style="display: none;">
 
                 <!-- If you want form to redirect to a specific url after submission -->
-                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/modal/formularioenviado.html"> <!-- Optional -->
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/modal/formularioenviado.html">
+                <!-- Optional -->
                 <!-- If we receive data in this field submission will be ignored -->
                 <input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
                 <div class="enviar"><input type="submit" value="Enviar" class="submit" /></div>
             </form>
         </div>
     </div>
+
+
+
+
 
     <div id="fade_hamburguer"></div>
 
@@ -154,7 +176,7 @@
         <div id="x-burguer" class="img-X-hamburguer"><img id="imagemDoX" src="../static/svg/x-icon.svg" alt="x"></div>
 
         <ul id="ul-hamburguer">
-            <a href="#">
+            <a href="../sobre nos/sobre_nos.html">
                 <li>
                     <p class="fontking">SOBRE NÓS</p>
                 </li>
@@ -164,18 +186,22 @@
                     <p class="fontking">EQUIPE</p>
                 </li>
             </a>
-            <a href="#">
+            <a href="../modalidades/modalidades.html">
                 <li>
-                    <p class="fontking">SHORÁRIOS</p>
+                    <p class="fontking">MODALIDADES</p>
                 </li>
             </a>
-            <a href="#">
+            <a href="../planos/planos.html">
                 <li>
                     <p class="fontking">PLANOS</p>
                 </li>
             </a>
         </ul>
     </div>
+
+
+
+
 
     <nav>
 
@@ -184,12 +210,13 @@
         </a>
 
 
-        <a class="linkLogonav" href=""><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg" alt="logo"></a>
+        <a class="linkLogonav" href="../home/home.html"><img id="logoNav" src="../static/svg/logoKing-escrito-rei.svg"
+                alt="logo"></a>
 
 
         <ul class="ul-principal-nav">
             <li>
-                <a class="cor-nav-elementos" href="#">
+                <a class="cor-nav-elementos" href="../sobre nos/sobre_nos.html">
                     <p class="fontking">SOBRE NÓS</p>
                 </a>
             </li>
@@ -198,11 +225,34 @@
                     <p class="fontking">EQUIPE</p>
                 </a>
             </li>
-            <li>
-                <a class="cor-nav-elementos" href="#">
-                    <p class="fontking">HORÁRIOS</p>
-                </a>
+
+            <li class="" id="planosNav">
+                <div class="cor-nav-planos li-drop">
+                    <p class="fontking">MODALIDADES</p>
+
+                    <div class="seta" id="cardSeta">
+                        <div class="face" id="idsetaFront">
+                            <img src="../static/svg/seta-icon.svg" alt="seta">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divsubMenu">
+                    <ul class="left ">
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathFuncional">
+                                <p class="fontking fonteTamanhoDrop">FUNCIONAL</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop"
+                                href="../modalidades/modalidades.html#pathTerapiaGrupo">
+                                <p class="fontking fonteTamanhoDrop">AULAS EM GRUPO</p>
+                            </a></li>
+                        <li class="centraliza"><a class="linkDrop" href="../modalidades/modalidades.html#pathTerapia">
+                                <p class="fontking fonteTamanhoDrop">TERAPIA MANUAIS</p>
+                            </a></li>
+                    </ul>
+                </div>
             </li>
+
             <li class="" id="planosNav">
                 <div class="cor-nav-planos li-drop">
                     <p class="fontking">PLANOS</p>
@@ -216,15 +266,20 @@
                 </div>
                 <div class="divsubMenu">
                     <ul>
-                        <li class="centraliza"><a class="linkDrop" href="">
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoMensal">
                                 <p class="fontking fonteTamanhoDrop">PLANO MENSAL</p>
                             </a></li>
-                        <li class="centraliza"><a class="linkDrop" href="">
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoSemestral">
                                 <p class="fontking fonteTamanhoDrop">PLANO SEMESTRAL</p>
                             </a></li>
-                        <li class="centraliza"><a class="linkDrop" href="">
+                        <li class="centraliza"><a class="linkDrop" href="../home/home.html#imgplanoAnoal">
                                 <p class="fontking fonteTamanhoDrop">PLANO ANUAL</p>
-                            </a></li>
+                            </a>
+                        </li>
+                        <li class="centraliza allPlanos"><a class="linkDrop" href="../planos/planos.html">
+                                <p class="fontking fonteTamanhoDrop">VER TODOS</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -240,6 +295,8 @@
 
     </nav>
 
+    <!-- Apartir daqui começa outra tela -->
+
     <section class="nossa-equipe">
         <img src="../static/img/equipeEditadoTrasparente.png" alt="Nossa Equipe">
         <div class="descricao1">
@@ -251,7 +308,10 @@
         </div>
         <div class="descricao2">
             <p><br>CONHEÇA CADA INTEGRANTE DA <br> NOSSA EQUIPE DE INSTRUTORES</p>
+            <img src="../static/svg/setaDupla-icon-paraBaixo.svg" alt="seta dupla para baixo">
         </div>
+
+
       </section>
 
         <br>
@@ -265,11 +325,22 @@
                     <p class="pergunta"><br>Por que você escolheu a Educação Física e quais são seus
                         objetivos com ela?</p>
                     <p class="resposta"><br>Escolhi educação física quando percebi que meu propósito era atuar na área de musculação, quando queria ajudar as pessoas e ver sua evolução. A educação física é muito mais que contar repetições, estamos na linha de frente de problemas físicos e mentais, costumo dizer que não escolhi esse curso ele que me escolheu, amo tanto ela que resolvi, ter toda essa energia no meu próprio local, aonde surgiu o King Studio, método King de treinamento, onde diversos alunos se encontraram e conseguiram se manter numa rotina de exercícios, onde diversos alunos, passam para compartilhar momentos e ter resultado no processo!</p>
-                    <p class="resposta"><br>Meus objetivos são, continuar este trabalho maravilhoso, 
+                    <p class="resposta">Meus objetivos são, continuar este trabalho maravilhoso, 
                         melhorar a cada dia, espalhar para a maior quantidade de 
-                        pessoas que educação física é capaz de mudar vidas!</p>
-              </div>
-              <img src="../static/img/instrutor-jean.png" alt="Foto do Personal Trainer">
+                        pessoas que educação física é capaz de mudar vidas!
+                    </p>
+                    <div class="container-redesocial">
+                        <div class="rede-social">
+                            <a href="https://www.instagram.com/jeancsp_/">
+                                <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                <strong class="fontking">@giancsp_</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutor-jean.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
 
             <div class="container">
@@ -285,8 +356,18 @@
                         um profissional sempre melhor que ontem, e para um futuro 
                         não distante quero realizar algo que tenha um objetivo de 
                         ajudar muitas pessoas.</p>
-              </div>
-              <img src="../static/img/instrutor-raphael.png" alt="Foto do Personal Trainer">
+                        <div class="container-redesocial">
+                            <div class="rede-social">
+                                <a href="https://www.instagram.com/raphinha_alonso">
+                                    <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                    <strong class="fontking">@rafinha_alonso</strong>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutor-raphael.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
 
             <div class="container">
@@ -301,8 +382,18 @@
                         melhor a cada dia é a melhor remuneração dessa profissão. 
                         Como professor entendo que quanto mais eu me dedico 
                         mais eu posso transformar a vida de alguém.</p>
-              </div>
-              <img src="../static/img/instrutor-marcelo.png" alt="Foto do Personal Trainer">
+                        <div class="container-redesocial">
+                            <div class="rede-social">
+                                <a href="https://www.instagram.com/mamelot/">
+                                    <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                    <strong class="fontking">@mamelot</strong>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutor-marcelo.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
 
             <div class="container">
@@ -318,8 +409,18 @@
                         mesmo dando meu melhor a cada dia
                         Meu objetivo ajudar próximo buscando sempre pela qualidade de vida. Sempre incentivando para cada aluno der 
                         seu melhor nos treinos</p>
-              </div>
-              <img src="../static/img/instrutor-alberto.png" alt="Foto do Personal Trainer">
+                        <div class="container-redesocial">
+                            <div class="rede-social">
+                                <a href="https://www.instagram.com/alberto_gnomo">
+                                    <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                    <strong class="fontking">@alberto_gnomo</strong>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutor-alberto.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
 
             <div class="container">
@@ -339,8 +440,18 @@
                         Meu objetivo como profissional de educação física é 
                         mostrar às pessoas os inúmeros benefícios que os exercícios 
                         físicos podem trazer à elas, sejam eles físicos ou mentais.</p>
-              </div>
-              <img src="../static/img/instrutor-guilherme.png" alt="Foto do Personal Trainer">
+                        <div class="container-redesocial">
+                            <div class="rede-social">
+                                <a href="https://www.instagram.com/guicolangeli">
+                                    <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                    <strong class="fontking">@guicolangeli</strong>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutor-guilherme.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
             
             <div class="container">
@@ -354,8 +465,18 @@
                         funcionalidade, e encontro na educação física a reversão 
                         deste problema, meus objetivos são claros e diretos que é 
                         dar ao meu corpo o seu movimento natural e assim ter qualidade de vida ao mesmo tempo que tenho uma profissão.</p>
-              </div>
-              <img src="../static/img/instrutor-henrique.png" alt="Foto do Personal Trainer">
+                        <div class="container-redesocial">
+                            <div class="rede-social">
+                                <a href="https://www.instagram.com/henrique_manuelll">
+                                    <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                    <strong class="fontking">@henrique_manuelll</strong>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutor-henrique.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
 
             <div class="container">
@@ -375,10 +496,111 @@
                         mais saudável. Seja correndo nas ruas, nos estúdios, na beira 
                         da praia, em casa, sempre terá a educação física presente 
                         nos melhores momentos da vida da gente.</p>
-              </div>
-              <img src="../static/img/instrutora-gabriele.png" alt="Foto da Personal Trainer">
+                        <div class="container-redesocial">
+                            <div class="rede-social">
+                                <a href="https://www.instagram.com/gabemartins.rs/">
+                                    <img src="../static/svg/insta-icon-vermelho.svg" alt="logo instagram">
+                                    <strong class="fontking">@gabemartins.rs</strong>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <div class="container-img-instrutores">
+                    <img src="../static/img/instrutora-gabriele.png" alt="Foto do Personal Trainer">
+                </div>
             </div>
 
           </section>
+
+          <footer>
+            <div class="container-principal-footer">
+                <svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.14 74.22">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M661,540.41c0-3,0-5.92,0-8.88,0-2.79,1.19-3.95,4-4q6.32-.06,12.62,0c2.62,0,3.87,1.23,3.9,3.87q.09,9.23,0,18.45c0,2.09-1.1,3.35-3.34,3.35-4.59,0-9.18.06-13.78,0-2.4,0-3.38-1.09-3.41-3.47C661,546.64,661,543.52,661,540.41Zm13.15,7.11v-9.79c0-4.88,0-4.89-4.84-4.6a2.34,2.34,0,0,0-.67.24v14.15Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1"
+                        d="M630.56,553.23V527.6c6,0,11.79-.08,17.61,0a2.77,2.77,0,0,1,2.67,3q.1,9.81,0,19.62a2.73,2.73,0,0,1-3,2.89C642.2,553.26,636.52,553.23,630.56,553.23Zm12.87-5.73V533.27h-5.95V547.5Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1"
+                        d="M543.17,553.13H523.22V527.74h20a29.21,29.21,0,0,1-1.58,4.37,2.72,2.72,0,0,1-2,.94c-3.1.1-6.2,0-9.48,0v14.43h6v-4.06l-3.47-.3V538h10.46Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1" d="M514.38,553.08V533.21h-6.17v19.86h-6.92V527.76h20v25.31Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1" d="M622,547.57V527.73h6.83v25.34H608.87V527.76h6.67v19.81Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1"
+                        d="M585.86,527.54a30.22,30.22,0,0,1-1.55,4.43,2.69,2.69,0,0,1-2,1c-3.09.11-6.18,0-9.39,0v4.66c3.06,0,6,0,8.93,0s4,1,4.12,4.07c.07,2.64,0,5.29,0,7.93,0,1.93-.92,3.31-2.83,3.35-5.73.13-11.48,0-17.6,0a31.45,31.45,0,0,1,1.69-4.54,2.82,2.82,0,0,1,2.09-.88c2.94-.1,5.88,0,8.76,0a4,4,0,0,0,.32-.87c.32-3.71.31-3.7-3.44-3.71-2,0-4,0-6.07,0-2.34-.1-3.44-1.18-3.51-3.47-.07-2.64-.09-5.29,0-7.93.08-2.94,1.26-4.08,4.17-4.1C574.92,527.52,580.26,527.54,585.86,527.54Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1" d="M587.33,527.68h20v5.25h-6.54v20.16h-7V533h-6.49Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1" d="M659.36,553.13h-6.61V527.74h6.61Z" transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1" d="M499.43,553.15h-6.51V527.71h6.51Z" transform="translate(-399.46 -503.26)" />
+                    <polygon class="cls-1"
+                        points="69.43 24.24 76.67 24.24 76.64 31.45 81.48 24.24 89.85 24.24 80.38 37.32 91.06 49.87 82.51 49.87 76.64 42.92 76.64 49.87 69.43 49.87 69.43 24.24" />
+                    <polygon class="cls-1"
+                        points="35.16 13.49 31.61 9.51 23.74 0 16.4 9.5 16.4 9.51 12.85 13.49 0.22 3.21 0.13 3.17 1.7 20.08 24.26 28.55 46.3 20.08 47.88 3.17 47.8 3.2 35.16 13.49" />
+                    <polygon class="cls-1" points="47.8 2.14 31.61 8.45 35.16 12.44 47.8 2.14" />
+                    <polygon class="cls-1" points="16.4 8.45 16.4 8.44 16.39 8.45 0.22 2.15 12.85 12.44 16.4 8.45" />
+                    <path class="cls-1"
+                        d="M401.4,527.65l-1.82,22.54S398.29,557.76,404,563c7.26,5.71,8.82,6.75,8.82,6.75V545.82s-5-2.39-6-7.27a10.58,10.58,0,0,1-.2-4.67L418,538v35.09l5.71,3.84V535.45Z"
+                        transform="translate(-399.46 -503.26)" />
+                    <path class="cls-1"
+                        d="M440.33,562.43,436.7,565l-3.11,2.08-1.56,1V545.82s5-2.39,6-7.27a10.58,10.58,0,0,0,.2-4.67L426.84,538v39.45l13.92-9.5s5.81-3.47,6.84-10.22C446,558.28,440.33,562.43,440.33,562.43Z"
+                        transform="translate(-399.46 -503.26)" />
+                </svg>
+                <ul>
+                    <li>
+                        <a class="cor-nav-elementos" href="../sobre nos/sobre_nos.html">
+                            <p class="fontking">SOBRE NÓS</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cor-nav-elementos" href="../nossa equipe/nossa_equipe.html">
+                            <p class="fontking">EQUIPE</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cor-nav-elementos" href="../modalidades/modalidades.html">
+                            <p class="fontking">MODALIDADES</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cor-nav-elementos" href="../planos/planos.html">
+                            <p class="fontking">PLANOS</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contato-footer">
+                <a href="https://api.whatsapp.com/send?phone=5548999529444" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-whatsapp icon-rede"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/kingstudioo_/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram icon-rede"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="origin">
+                <p>Created in 2023 by <a href="https://www.linkedin.com/in/tassio-hipolito-de-amorim-73a55324b/"
+                        target="_blank">Tassio</a>, <a
+                        href="https://www.linkedin.com/in/thiago-hip%C3%B3lito-de-amorim-88b518216/"
+                        target="_blank">Thiago</a> e <a href="https://www.linkedin.com/in/luan-k-souza-058343274/"
+                        target="_blank">Luan</a></p>
+            </div>
+        </footer>
 </body>
 </html>
